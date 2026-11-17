@@ -1,0 +1,167 @@
+{
+  "business": {
+    "name": "Titanium South Florida",
+    "tagline": "Tu carro, aunque no tengas Social.",
+    "contactName": "Sebastián",
+    "voiceName": "Kiko",
+    "phone": "(305) 464-8968",
+    "whatsapp": "13054648968",
+    "address": {
+      "street": "5800 Funston St",
+      "city": "Hollywood",
+      "state": "FL",
+      "zip": "33023",
+      "area": "Broward",
+      "landmark": "Esquina",
+      "mapUrl": "https://www.google.com/maps/search/?api=1&query=5800+Funston+St,+Hollywood,+FL+33023"
+    },
+    "hours": [
+      {
+        "days": "Lunes a Viernes",
+        "hours": "9:00 am – 7:00 pm"
+      },
+      {
+        "days": "Sábado",
+        "hours": "10:00 am – 5:00 pm"
+      },
+      {
+        "days": "Domingo",
+        "hours": "Cerrado"
+      }
+    ]
+  },
+  "locale": {
+    "code": "es-US",
+    "currency": "USD"
+  },
+  "hero": {
+    "headline": "Tu próximo carro, sin SSN.",
+    "media": {
+      "mp4": "videos/hero-clientes.mp4",
+      "poster": "images/hero-clientes-poster.jpg"
+    },
+    "highlights": [
+      "Solo pasaporte y licencia",
+      "Título limpio (Clean Title)",
+      "Inicial desde $2,000*"
+    ],
+    "deliveries": [
+      {
+        "src": "/images/clientes-web/cliente-1.jpg",
+        "alt": "Clientes de Titanium South Florida junto a su carro",
+        "caption": "Clientes de Broward"
+      },
+      {
+        "src": "/images/clientes-web/cliente-2.jpg",
+        "alt": "Clientes de Titanium South Florida junto a su carro",
+        "caption": "Clientes de Broward"
+      },
+      {
+        "src": "/images/clientes-web/cliente-3.jpg",
+        "alt": "Clientes de Titanium South Florida junto a su carro",
+        "caption": "Clientes de Broward"
+      },
+      {
+        "src": "/images/clientes-web/cliente-4.jpg",
+        "alt": "Clientes de Titanium South Florida junto a su carro",
+        "caption": "Clientes de Broward"
+      },
+      {
+        "src": "/images/clientes-web/cliente-5.jpg",
+        "alt": "Clientes de Titanium South Florida junto a su carro",
+        "caption": "Clientes de Broward"
+      },
+      {
+        "src": "/images/clientes-web/cliente-6.jpg",
+        "alt": "Clientes de Titanium South Florida junto a su carro",
+        "caption": "Clientes de Broward"
+      },
+      {
+        "src": "/images/clientes-web/cliente-7.jpg",
+        "alt": "Clientes de Titanium South Florida junto a su carro",
+        "caption": "Clientes de Broward"
+      }
+    ],
+    "budgetOptions": [
+      10000,
+      15000,
+      20000,
+      25000,
+      30000,
+      40000,
+      50000
+    ]
+  },
+  "trust": {
+    "rating": {
+      "score": 4.9,
+      "count": 312,
+      "source": "Google"
+    },
+    "stats": [
+      {
+        "value": "2,400+",
+        "label": "Familias felices"
+      },
+      {
+        "value": "24 h",
+        "label": "Aprobación promedio"
+      },
+      {
+        "value": "150",
+        "label": "Puntos de inspección"
+      },
+      {
+        "value": "92%",
+        "label": "Aprobación de crédito"
+      }
+    ]
+  },
+  "loan": {
+    "price": {
+      "min": 5000,
+      "max": 100000,
+      "step": 500,
+      "default": 25000
+    },
+    "downPayment": {
+      "minPercent": 35,
+      "maxPercent": 45,
+      "step": 100,
+      "defaultPercent": 40
+    },
+    "terms": [
+      24,
+      36,
+      48,
+      60,
+      72,
+      84
+    ],
+    "defaultTerm": 60,
+    "creditProfiles": [
+      {
+        "id": "excellent",
+        "label": "Excelente (720+)",
+        "apr": 5.9
+      },
+      {
+        "id": "good",
+        "label": "Bueno (660 – 719)",
+        "apr": 8.9
+      },
+      {
+        "id": "fair",
+        "label": "Regular (600 – 659)",
+        "apr": 13.9
+      },
+      {
+        "id": "building",
+        "label": "En construcción (< 600)",
+        "apr": 18.9
+      }
+    ],
+    "defaultCreditProfile": "good",
+    "disclaimer": "Prices shown reflect the amount to be financed after a 35%–45% down payment. Subject to approval. Not cash price.\nLos precios publicados son el monto a financiar después de una inicial del 35%–45%. Sujeto a aprobación. No es precio de contado."
+  }
+}

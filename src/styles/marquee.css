@@ -1,0 +1,44 @@
+/**
+ * Carrusel continuo (marquee) para el hero. No es una animación de entrada, por eso
+ * vive aparte de animista.css. El track contiene el set de tarjetas DOS veces; al
+ * desplazar -50% (+ medio gap) el bucle es imperceptible.
+ */
+.marquee {
+  overflow: hidden;
+  -webkit-mask-image: linear-gradient(to right, transparent, #000 7%, #000 93%, transparent);
+  mask-image: linear-gradient(to right, transparent, #000 7%, #000 93%, transparent);
+}
+
+.marquee__track {
+  --gap: 1rem;
+  display: flex;
+  width: max-content;
+  gap: var(--gap);
+  animation: marquee-scroll 50s linear infinite;
+}
+
+.marquee:hover .marquee__track,
+.marquee:focus-within .marquee__track {
+  animation-play-state: paused;
+}
+
+@keyframes marquee-scroll {
+  to {
+    transform: translateX(calc(-50% - var(--gap) / 2));
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .marquee {
+    overflow-x: auto;
+    -webkit-mask-image: none;
+    mask-image: none;
+  }
+  .marquee__track {
+    animation: none;
+  }
+  /* La copia duplicada solo existe para el bucle. */
+  .marquee__track > [data-marquee-clone] {
+    display: none;
+  }
+}

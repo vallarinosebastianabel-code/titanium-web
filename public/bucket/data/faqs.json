@@ -1,0 +1,58 @@
+{
+  "faqs": [
+    {
+      "id": "f-01",
+      "category": "requisitos",
+      "question": "¿Necesito SSN / Social?",
+      "answer": "No. Trabajamos con financiamiento propio: no dependes del banco. Trae pasaporte y licencia. La aprobación está sujeta a revisión."
+    },
+    {
+      "id": "f-02",
+      "category": "requisitos",
+      "question": "¿Qué documentos necesito?",
+      "answer": "Pasaporte y licencia. Si tienes más papeles, tráelos; no son el requisito para empezar. Te decimos en WhatsApp si hace falta algo más para tu caso."
+    },
+    {
+      "id": "f-03",
+      "category": "requisitos",
+      "question": "¿Sirve licencia extranjera?",
+      "answer": "Tráela junto con el pasaporte y lo revisamos. La respuesta final te la confirma Sebastián, carro por carro."
+    },
+    {
+      "id": "f-04",
+      "category": "financiamiento",
+      "question": "¿Cuánto es la inicial de verdad?",
+      "answer": "El precio que ves es el monto a financiar, después de una inicial del 35%–45%. En algunos carros la inicial puede empezar en $2,000. Te la confirmamos por WhatsApp, carro por carro. Sujeto a aprobación. No es precio de contado."
+    },
+    {
+      "id": "f-05",
+      "category": "inventario",
+      "question": "¿El título está limpio?",
+      "answer": "Publicamos carros con título limpio (Clean Title): sin salvage y sin esa sorpresa. Si un carro no lo tiene, no lo vendemos como si lo tuviera."
+    },
+    {
+      "id": "f-06",
+      "category": "financiamiento",
+      "question": "¿Salgo manejando el mismo día?",
+      "answer": "Es posible, sujeto a aprobación y a que traigas pasaporte, licencia e inicial. No es automático: te lo confirmamos cuando vemos tu caso."
+    },
+    {
+      "id": "f-07",
+      "category": "financiamiento",
+      "question": "¿Qué pasa si me atraso un pago?",
+      "answer": "Háblanos antes. Preferimos acomodar que sorprender. Las reglas te las explicamos al firmar, en español y por escrito."
+    },
+    {
+      "id": "f-08",
+      "category": "requisitos",
+      "question": "¿Puedo sacar el seguro a mi nombre?",
+      "answer": "El carro sale a tu nombre. El seguro también puede ir a tu nombre; si todavía no lo tienes, te decimos qué necesitas antes de retirarlo. Confírmalo con Sebastián al elegir el carro."
+    },
+    {
+      "id": "f-09",
+      "category": "inventario",
+      "question": "¿Esto es lo mismo que Apolo?",
+      "answer": "No. Apolo está en Miami-Dade. Titanium South Florida / Kiko Cars está en Broward: Hollywood y alrededores. Misma familia, otra casa."
+    }
+  ]
+}

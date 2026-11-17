@@ -1,0 +1,978 @@
+{
+  "version": 1,
+  "updatedAt": "2026-10-12T15:41:09.638Z",
+  "vehicles": [
+    {
+      "id": "v-001",
+      "slug": "2021-ram-1500-limited-tm-1000",
+      "stockNumber": "TM-1000",
+      "status": "available",
+      "featured": true,
+      "make": "RAM",
+      "model": "1500",
+      "trim": "Limited",
+      "year": 2021,
+      "bodyType": "pickup",
+      "price": 7500,
+      "mileage": 52300,
+      "transmission": "automatic",
+      "fuelType": "gasoline",
+      "drivetrain": "4x4",
+      "engine": "5.7L V8 HEMI",
+      "exteriorColor": "burgundy",
+      "badges": [
+        "Destacado"
+      ],
+      "features": [
+        "Bluetooth",
+        "Cámara de reversa",
+        "Apple CarPlay / Android Auto",
+        "Control de crucero",
+        "Quemacocos",
+        "Asientos de cuero"
+      ],
+      "description": "2021 RAM 1500 Limited con historial verificado e inspección mecánica completa de 150 puntos.",
+      "images": [
+        {
+          "src": "images/vehicles/tm-1000-1.jpg",
+          "alt": "2021 RAM 1500 Limited"
+        },
+        {
+          "src": "images/vehicles/tm-1000-2.jpg",
+          "alt": "2021 RAM 1500 Limited – foto 2"
+        },
+        {
+          "src": "images/vehicles/tm-1000-3.jpg",
+          "alt": "2021 RAM 1500 Limited – foto 3"
+        },
+        {
+          "src": "images/vehicles/tm-1000-4.jpg",
+          "alt": "2021 RAM 1500 Limited – foto 4"
+        },
+        {
+          "src": "images/vehicles/tm-1000-5.jpg",
+          "alt": "2021 RAM 1500 Limited – foto 5"
+        }
+      ],
+      "publishedAt": "2026-10-12T00:00:00.000Z"
+    },
+    {
+      "id": "v-002",
+      "slug": "2019-ford-f-150-limited-tm-1001",
+      "stockNumber": "TM-1001",
+      "status": "available",
+      "featured": true,
+      "make": "Ford",
+      "model": "F-150",
+      "trim": "Limited",
+      "year": 2019,
+      "bodyType": "pickup",
+      "price": 42900,
+      "mileage": 61200,
+      "transmission": "automatic",
+      "fuelType": "gasoline",
+      "drivetrain": "4x4",
+      "engine": "3.5L V6 EcoBoost",
+      "exteriorColor": "white",
+      "badges": [
+        "4x4"
+      ],
+      "features": [
+        "Bluetooth",
+        "Cámara de reversa",
+        "Apple CarPlay / Android Auto",
+        "Control de crucero",
+        "Quemacocos",
+        "Asientos de cuero"
+      ],
+      "description": "2019 Ford F-150 Limited con historial verificado e inspección mecánica completa de 150 puntos.",
+      "images": [
+        {
+          "src": "images/vehicles/tm-1001-1.jpg",
+          "alt": "2019 Ford F-150 Limited"
+        },
+        {
+          "src": "images/vehicles/tm-1001-2.jpg",
+          "alt": "2019 Ford F-150 Limited – foto 2"
+        },
+        {
+          "src": "images/vehicles/tm-1001-3.jpg",
+          "alt": "2019 Ford F-150 Limited – foto 3"
+        },
+        {
+          "src": "images/vehicles/tm-1001-4.jpg",
+          "alt": "2019 Ford F-150 Limited – foto 4"
+        },
+        {
+          "src": "images/vehicles/tm-1001-5.jpg",
+          "alt": "2019 Ford F-150 Limited – foto 5"
+        }
+      ],
+      "publishedAt": "2026-10-11T00:00:00.000Z"
+    },
+    {
+      "id": "v-003",
+      "slug": "2022-toyota-highlander-tm-1002",
+      "stockNumber": "TM-1002",
+      "status": "available",
+      "featured": true,
+      "make": "Toyota",
+      "model": "Highlander",
+      "year": 2022,
+      "bodyType": "suv",
+      "price": 38900,
+      "mileage": 41800,
+      "transmission": "automatic",
+      "fuelType": "gasoline",
+      "engine": "3.5L V6",
+      "exteriorColor": "silver",
+      "badges": [
+        "Tercera fila"
+      ],
+      "features": [
+        "Bluetooth",
+        "Cámara de reversa",
+        "Apple CarPlay / Android Auto",
+        "Control de crucero",
+        "Quemacocos",
+        "Asientos de cuero"
+      ],
+      "description": "2022 Toyota Highlander con historial verificado e inspección mecánica completa de 150 puntos.",
+      "images": [
+        {
+          "src": "images/vehicles/tm-1002-1.jpg",
+          "alt": "2022 Toyota Highlander"
+        },
+        {
+          "src": "images/vehicles/tm-1002-2.jpg",
+          "alt": "2022 Toyota Highlander – foto 2"
+        },
+        {
+          "src": "images/vehicles/tm-1002-3.jpg",
+          "alt": "2022 Toyota Highlander – foto 3"
+        },
+        {
+          "src": "images/vehicles/tm-1002-4.jpg",
+          "alt": "2022 Toyota Highlander – foto 4"
+        },
+        {
+          "src": "images/vehicles/tm-1002-5.jpg",
+          "alt": "2022 Toyota Highlander – foto 5"
+        }
+      ],
+      "publishedAt": "2026-10-10T00:00:00.000Z"
+    },
+    {
+      "id": "v-004",
+      "slug": "2022-toyota-rav4-tm-1003",
+      "stockNumber": "TM-1003",
+      "status": "available",
+      "featured": true,
+      "make": "Toyota",
+      "model": "RAV4",
+      "year": 2022,
+      "bodyType": "suv",
+      "price": 31900,
+      "mileage": 28400,
+      "transmission": "automatic",
+      "fuelType": "gasoline",
+      "drivetrain": "awd",
+      "engine": "2.5L 4 cil.",
+      "exteriorColor": "blue",
+      "badges": [
+        "Más vendido"
+      ],
+      "features": [
+        "Bluetooth",
+        "Cámara de reversa",
+        "Apple CarPlay / Android Auto",
+        "Control de crucero",
+        "Quemacocos"
+      ],
+      "description": "2022 Toyota RAV4 con historial verificado e inspección mecánica completa de 150 puntos.",
+      "images": [
+        {
+          "src": "images/vehicles/tm-1003-1.jpg",
+          "alt": "2022 Toyota RAV4"
+        },
+        {
+          "src": "images/vehicles/tm-1003-2.jpg",
+          "alt": "2022 Toyota RAV4 – foto 2"
+        },
+        {
+          "src": "images/vehicles/tm-1003-3.jpg",
+          "alt": "2022 Toyota RAV4 – foto 3"
+        },
+        {
+          "src": "images/vehicles/tm-1003-4.jpg",
+          "alt": "2022 Toyota RAV4 – foto 4"
+        },
+        {
+          "src": "images/vehicles/tm-1003-5.jpg",
+          "alt": "2022 Toyota RAV4 – foto 5"
+        }
+      ],
+      "publishedAt": "2026-10-09T00:00:00.000Z"
+    },
+    {
+      "id": "v-005",
+      "slug": "2023-honda-cr-v-ex-tm-1004",
+      "stockNumber": "TM-1004",
+      "status": "available",
+      "featured": true,
+      "make": "Honda",
+      "model": "CR-V",
+      "trim": "EX",
+      "year": 2023,
+      "bodyType": "suv",
+      "price": 30900,
+      "mileage": 22100,
+      "transmission": "automatic",
+      "fuelType": "gasoline",
+      "engine": "1.5L Turbo",
+      "exteriorColor": "silver",
+      "badges": [
+        "Casi nuevo"
+      ],
+      "features": [
+        "Bluetooth",
+        "Cámara de reversa",
+        "Apple CarPlay / Android Auto",
+        "Control de crucero",
+        "Quemacocos"
+      ],
+      "description": "2023 Honda CR-V EX con historial verificado e inspección mecánica completa de 150 puntos.",
+      "images": [
+        {
+          "src": "images/vehicles/tm-1004-1.jpg",
+          "alt": "2023 Honda CR-V EX"
+        },
+        {
+          "src": "images/vehicles/tm-1004-2.jpg",
+          "alt": "2023 Honda CR-V EX – foto 2"
+        },
+        {
+          "src": "images/vehicles/tm-1004-3.jpg",
+          "alt": "2023 Honda CR-V EX – foto 3"
+        },
+        {
+          "src": "images/vehicles/tm-1004-4.jpg",
+          "alt": "2023 Honda CR-V EX – foto 4"
+        },
+        {
+          "src": "images/vehicles/tm-1004-5.jpg",
+          "alt": "2023 Honda CR-V EX – foto 5"
+        }
+      ],
+      "publishedAt": "2026-10-08T00:00:00.000Z"
+    },
+    {
+      "id": "v-006",
+      "slug": "2020-toyota-tacoma-trd-off-road-tm-1005",
+      "stockNumber": "TM-1005",
+      "status": "available",
+      "featured": true,
+      "make": "Toyota",
+      "model": "Tacoma",
+      "trim": "TRD Off-Road",
+      "year": 2020,
+      "bodyType": "pickup",
+      "price": 34900,
+      "mileage": 44600,
+      "transmission": "automatic",
+      "fuelType": "gasoline",
+      "drivetrain": "4x4",
+      "engine": "3.5L V6",
+      "exteriorColor": "silver",
+      "badges": [
+        "4x4"
+      ],
+      "features": [
+        "Bluetooth",
+        "Cámara de reversa",
+        "Apple CarPlay / Android Auto",
+        "Control de crucero"
+      ],
+      "description": "2020 Toyota Tacoma TRD Off-Road con historial verificado e inspección mecánica completa de 150 puntos.",
+      "images": [
+        {
+          "src": "images/vehicles/tm-1005-1.jpg",
+          "alt": "2020 Toyota Tacoma TRD Off-Road"
+        },
+        {
+          "src": "images/vehicles/tm-1005-2.jpg",
+          "alt": "2020 Toyota Tacoma TRD Off-Road – foto 2"
+        },
+        {
+          "src": "images/vehicles/tm-1005-3.jpg",
+          "alt": "2020 Toyota Tacoma TRD Off-Road – foto 3"
+        },
+        {
+          "src": "images/vehicles/tm-1005-4.jpg",
+          "alt": "2020 Toyota Tacoma TRD Off-Road – foto 4"
+        },
+        {
+          "src": "images/vehicles/tm-1005-5.jpg",
+          "alt": "2020 Toyota Tacoma TRD Off-Road – foto 5"
+        }
+      ],
+      "publishedAt": "2026-10-07T00:00:00.000Z"
+    },
+    {
+      "id": "v-007",
+      "slug": "2022-toyota-sienna-tm-1006",
+      "stockNumber": "TM-1006",
+      "status": "available",
+      "featured": false,
+      "make": "Toyota",
+      "model": "Sienna",
+      "year": 2022,
+      "bodyType": "van",
+      "price": 41900,
+      "mileage": 30900,
+      "transmission": "automatic",
+      "fuelType": "hybrid",
+      "engine": "2.5L Híbrido",
+      "exteriorColor": "white",
+      "badges": [
+        "Híbrido"
+      ],
+      "features": [
+        "Bluetooth",
+        "Cámara de reversa",
+        "Apple CarPlay / Android Auto",
+        "Control de crucero"
+      ],
+      "description": "2022 Toyota Sienna con historial verificado e inspección mecánica completa de 150 puntos.",
+      "images": [
+        {
+          "src": "images/vehicles/tm-1006-1.jpg",
+          "alt": "2022 Toyota Sienna"
+        },
+        {
+          "src": "images/vehicles/tm-1006-2.jpg",
+          "alt": "2022 Toyota Sienna – foto 2"
+        },
+        {
+          "src": "images/vehicles/tm-1006-3.jpg",
+          "alt": "2022 Toyota Sienna – foto 3"
+        },
+        {
+          "src": "images/vehicles/tm-1006-4.jpg",
+          "alt": "2022 Toyota Sienna – foto 4"
+        },
+        {
+          "src": "images/vehicles/tm-1006-5.jpg",
+          "alt": "2022 Toyota Sienna – foto 5"
+        }
+      ],
+      "publishedAt": "2026-10-06T00:00:00.000Z"
+    },
+    {
+      "id": "v-008",
+      "slug": "2021-chevrolet-suburban-lt-tm-1007",
+      "stockNumber": "TM-1007",
+      "status": "available",
+      "featured": false,
+      "make": "Chevrolet",
+      "model": "Suburban",
+      "trim": "LT",
+      "year": 2021,
+      "bodyType": "suv",
+      "price": 48900,
+      "mileage": 49200,
+      "transmission": "automatic",
+      "fuelType": "gasoline",
+      "drivetrain": "4x4",
+      "engine": "5.3L V8",
+      "exteriorColor": "gray",
+      "badges": [
+        "Tercera fila"
+      ],
+      "features": [
+        "Bluetooth",
+        "Cámara de reversa",
+        "Apple CarPlay / Android Auto",
+        "Control de crucero",
+        "Asientos de cuero"
+      ],
+      "description": "2021 Chevrolet Suburban LT con historial verificado e inspección mecánica completa de 150 puntos.",
+      "images": [
+        {
+          "src": "images/vehicles/tm-1007-1.jpg",
+          "alt": "2021 Chevrolet Suburban LT"
+        },
+        {
+          "src": "images/vehicles/tm-1007-2.jpg",
+          "alt": "2021 Chevrolet Suburban LT – foto 2"
+        },
+        {
+          "src": "images/vehicles/tm-1007-3.jpg",
+          "alt": "2021 Chevrolet Suburban LT – foto 3"
+        },
+        {
+          "src": "images/vehicles/tm-1007-4.jpg",
+          "alt": "2021 Chevrolet Suburban LT – foto 4"
+        },
+        {
+          "src": "images/vehicles/tm-1007-5.jpg",
+          "alt": "2021 Chevrolet Suburban LT – foto 5"
+        }
+      ],
+      "publishedAt": "2026-10-05T00:00:00.000Z"
+    },
+    {
+      "id": "v-009",
+      "slug": "2022-chevrolet-silverado-1500-custom-tm-1008",
+      "stockNumber": "TM-1008",
+      "status": "available",
+      "featured": false,
+      "make": "Chevrolet",
+      "model": "Silverado 1500",
+      "trim": "Custom",
+      "year": 2022,
+      "bodyType": "pickup",
+      "price": 35900,
+      "mileage": 38100,
+      "transmission": "automatic",
+      "fuelType": "gasoline",
+      "exteriorColor": "white",
+      "badges": [],
+      "features": [
+        "Bluetooth",
+        "Cámara de reversa",
+        "Apple CarPlay / Android Auto",
+        "Control de crucero"
+      ],
+      "description": "2022 Chevrolet Silverado 1500 Custom con historial verificado e inspección mecánica completa de 150 puntos.",
+      "images": [
+        {
+          "src": "images/vehicles/tm-1008-1.jpg",
+          "alt": "2022 Chevrolet Silverado 1500 Custom"
+        },
+        {
+          "src": "images/vehicles/tm-1008-2.jpg",
+          "alt": "2022 Chevrolet Silverado 1500 Custom – foto 2"
+        },
+        {
+          "src": "images/vehicles/tm-1008-3.jpg",
+          "alt": "2022 Chevrolet Silverado 1500 Custom – foto 3"
+        },
+        {
+          "src": "images/vehicles/tm-1008-4.jpg",
+          "alt": "2022 Chevrolet Silverado 1500 Custom – foto 4"
+        },
+        {
+          "src": "images/vehicles/tm-1008-5.jpg",
+          "alt": "2022 Chevrolet Silverado 1500 Custom – foto 5"
+        }
+      ],
+      "publishedAt": "2026-10-04T00:00:00.000Z"
+    },
+    {
+      "id": "v-010",
+      "slug": "2021-toyota-tacoma-trd-off-road-tm-1009",
+      "stockNumber": "TM-1009",
+      "status": "available",
+      "featured": false,
+      "make": "Toyota",
+      "model": "Tacoma",
+      "trim": "TRD Off-Road",
+      "year": 2021,
+      "bodyType": "pickup",
+      "price": 36900,
+      "mileage": 36300,
+      "transmission": "automatic",
+      "fuelType": "gasoline",
+      "drivetrain": "4x4",
+      "engine": "3.5L V6",
+      "exteriorColor": "white",
+      "badges": [
+        "4x4"
+      ],
+      "features": [
+        "Bluetooth",
+        "Cámara de reversa",
+        "Apple CarPlay / Android Auto",
+        "Control de crucero"
+      ],
+      "description": "2021 Toyota Tacoma TRD Off-Road con historial verificado e inspección mecánica completa de 150 puntos.",
+      "images": [
+        {
+          "src": "images/vehicles/tm-1009-1.jpg",
+          "alt": "2021 Toyota Tacoma TRD Off-Road"
+        },
+        {
+          "src": "images/vehicles/tm-1009-2.jpg",
+          "alt": "2021 Toyota Tacoma TRD Off-Road – foto 2"
+        },
+        {
+          "src": "images/vehicles/tm-1009-3.jpg",
+          "alt": "2021 Toyota Tacoma TRD Off-Road – foto 3"
+        },
+        {
+          "src": "images/vehicles/tm-1009-4.jpg",
+          "alt": "2021 Toyota Tacoma TRD Off-Road – foto 4"
+        },
+        {
+          "src": "images/vehicles/tm-1009-5.jpg",
+          "alt": "2021 Toyota Tacoma TRD Off-Road – foto 5"
+        }
+      ],
+      "publishedAt": "2026-10-03T00:00:00.000Z"
+    },
+    {
+      "id": "v-011",
+      "slug": "2018-ford-f-150-tm-1010",
+      "stockNumber": "TM-1010",
+      "status": "available",
+      "featured": false,
+      "make": "Ford",
+      "model": "F-150",
+      "year": 2018,
+      "bodyType": "pickup",
+      "price": 31900,
+      "mileage": 78400,
+      "transmission": "automatic",
+      "fuelType": "gasoline",
+      "exteriorColor": "gray",
+      "badges": [],
+      "features": [
+        "Bluetooth",
+        "Cámara de reversa",
+        "Apple CarPlay / Android Auto",
+        "Control de crucero",
+        "Asientos de cuero"
+      ],
+      "description": "2018 Ford F-150 con historial verificado e inspección mecánica completa de 150 puntos.",
+      "images": [
+        {
+          "src": "images/vehicles/tm-1010-1.jpg",
+          "alt": "2018 Ford F-150"
+        },
+        {
+          "src": "images/vehicles/tm-1010-2.jpg",
+          "alt": "2018 Ford F-150 – foto 2"
+        },
+        {
+          "src": "images/vehicles/tm-1010-3.jpg",
+          "alt": "2018 Ford F-150 – foto 3"
+        },
+        {
+          "src": "images/vehicles/tm-1010-4.jpg",
+          "alt": "2018 Ford F-150 – foto 4"
+        },
+        {
+          "src": "images/vehicles/tm-1010-5.jpg",
+          "alt": "2018 Ford F-150 – foto 5"
+        }
+      ],
+      "publishedAt": "2026-10-02T00:00:00.000Z"
+    },
+    {
+      "id": "v-012",
+      "slug": "2021-toyota-highlander-tm-1011",
+      "stockNumber": "TM-1011",
+      "status": "available",
+      "featured": false,
+      "make": "Toyota",
+      "model": "Highlander",
+      "year": 2021,
+      "bodyType": "suv",
+      "price": 34900,
+      "mileage": 47500,
+      "transmission": "automatic",
+      "fuelType": "gasoline",
+      "engine": "3.5L V6",
+      "exteriorColor": "silver",
+      "badges": [],
+      "features": [
+        "Bluetooth",
+        "Cámara de reversa",
+        "Apple CarPlay / Android Auto",
+        "Control de crucero"
+      ],
+      "description": "2021 Toyota Highlander con historial verificado e inspección mecánica completa de 150 puntos.",
+      "images": [
+        {
+          "src": "images/vehicles/tm-1011-1.jpg",
+          "alt": "2021 Toyota Highlander"
+        },
+        {
+          "src": "images/vehicles/tm-1011-2.jpg",
+          "alt": "2021 Toyota Highlander – foto 2"
+        },
+        {
+          "src": "images/vehicles/tm-1011-3.jpg",
+          "alt": "2021 Toyota Highlander – foto 3"
+        },
+        {
+          "src": "images/vehicles/tm-1011-4.jpg",
+          "alt": "2021 Toyota Highlander – foto 4"
+        },
+        {
+          "src": "images/vehicles/tm-1011-5.jpg",
+          "alt": "2021 Toyota Highlander – foto 5"
+        }
+      ],
+      "publishedAt": "2026-10-01T00:00:00.000Z"
+    },
+    {
+      "id": "v-013",
+      "slug": "2019-honda-pilot-tm-1012",
+      "stockNumber": "TM-1012",
+      "status": "available",
+      "featured": false,
+      "make": "Honda",
+      "model": "Pilot",
+      "year": 2019,
+      "bodyType": "suv",
+      "price": 27900,
+      "mileage": 66100,
+      "transmission": "automatic",
+      "fuelType": "gasoline",
+      "drivetrain": "awd",
+      "engine": "3.5L V6",
+      "exteriorColor": "black",
+      "badges": [
+        "Tercera fila"
+      ],
+      "features": [
+        "Bluetooth",
+        "Cámara de reversa",
+        "Apple CarPlay / Android Auto",
+        "Control de crucero",
+        "Quemacocos",
+        "Asientos de cuero"
+      ],
+      "description": "2019 Honda Pilot con historial verificado e inspección mecánica completa de 150 puntos.",
+      "images": [
+        {
+          "src": "images/vehicles/tm-1012-1.jpg",
+          "alt": "2019 Honda Pilot"
+        },
+        {
+          "src": "images/vehicles/tm-1012-2.jpg",
+          "alt": "2019 Honda Pilot – foto 2"
+        },
+        {
+          "src": "images/vehicles/tm-1012-3.jpg",
+          "alt": "2019 Honda Pilot – foto 3"
+        },
+        {
+          "src": "images/vehicles/tm-1012-4.jpg",
+          "alt": "2019 Honda Pilot – foto 4"
+        },
+        {
+          "src": "images/vehicles/tm-1012-5.jpg",
+          "alt": "2019 Honda Pilot – foto 5"
+        }
+      ],
+      "publishedAt": "2026-09-30T00:00:00.000Z"
+    },
+    {
+      "id": "v-014",
+      "slug": "2023-honda-cr-v-sport-hybrid-tm-1013",
+      "stockNumber": "TM-1013",
+      "status": "available",
+      "featured": false,
+      "make": "Honda",
+      "model": "CR-V",
+      "trim": "Sport Hybrid",
+      "year": 2023,
+      "bodyType": "suv",
+      "price": 33900,
+      "mileage": 19400,
+      "transmission": "automatic",
+      "fuelType": "hybrid",
+      "drivetrain": "awd",
+      "engine": "2.0L Híbrido",
+      "exteriorColor": "gray",
+      "badges": [
+        "Híbrido"
+      ],
+      "features": [
+        "Bluetooth",
+        "Cámara de reversa",
+        "Apple CarPlay / Android Auto",
+        "Control de crucero",
+        "Quemacocos"
+      ],
+      "description": "2023 Honda CR-V Sport Hybrid con historial verificado e inspección mecánica completa de 150 puntos.",
+      "images": [
+        {
+          "src": "images/vehicles/tm-1013-1.jpg",
+          "alt": "2023 Honda CR-V Sport Hybrid"
+        },
+        {
+          "src": "images/vehicles/tm-1013-2.jpg",
+          "alt": "2023 Honda CR-V Sport Hybrid – foto 2"
+        },
+        {
+          "src": "images/vehicles/tm-1013-3.jpg",
+          "alt": "2023 Honda CR-V Sport Hybrid – foto 3"
+        },
+        {
+          "src": "images/vehicles/tm-1013-4.jpg",
+          "alt": "2023 Honda CR-V Sport Hybrid – foto 4"
+        },
+        {
+          "src": "images/vehicles/tm-1013-5.jpg",
+          "alt": "2023 Honda CR-V Sport Hybrid – foto 5"
+        }
+      ],
+      "publishedAt": "2026-09-29T00:00:00.000Z"
+    },
+    {
+      "id": "v-015",
+      "slug": "2018-honda-cr-v-tm-1014",
+      "stockNumber": "TM-1014",
+      "status": "available",
+      "featured": false,
+      "make": "Honda",
+      "model": "CR-V",
+      "year": 2018,
+      "bodyType": "suv",
+      "price": 21900,
+      "mileage": 71200,
+      "transmission": "automatic",
+      "fuelType": "gasoline",
+      "engine": "1.5L Turbo",
+      "exteriorColor": "blue",
+      "badges": [],
+      "features": [
+        "Bluetooth",
+        "Cámara de reversa",
+        "Apple CarPlay / Android Auto",
+        "Control de crucero",
+        "Quemacocos"
+      ],
+      "description": "2018 Honda CR-V con historial verificado e inspección mecánica completa de 150 puntos.",
+      "images": [
+        {
+          "src": "images/vehicles/tm-1014-1.jpg",
+          "alt": "2018 Honda CR-V"
+        },
+        {
+          "src": "images/vehicles/tm-1014-2.jpg",
+          "alt": "2018 Honda CR-V – foto 2"
+        },
+        {
+          "src": "images/vehicles/tm-1014-3.jpg",
+          "alt": "2018 Honda CR-V – foto 3"
+        },
+        {
+          "src": "images/vehicles/tm-1014-4.jpg",
+          "alt": "2018 Honda CR-V – foto 4"
+        },
+        {
+          "src": "images/vehicles/tm-1014-5.jpg",
+          "alt": "2018 Honda CR-V – foto 5"
+        }
+      ],
+      "publishedAt": "2026-09-28T00:00:00.000Z"
+    },
+    {
+      "id": "v-016",
+      "slug": "2023-honda-accord-tm-1015",
+      "stockNumber": "TM-1015",
+      "status": "available",
+      "featured": false,
+      "make": "Honda",
+      "model": "Accord",
+      "year": 2023,
+      "bodyType": "sedan",
+      "price": 27900,
+      "mileage": 24300,
+      "transmission": "automatic",
+      "fuelType": "gasoline",
+      "drivetrain": "fwd",
+      "engine": "1.5L Turbo",
+      "exteriorColor": "black",
+      "badges": [],
+      "features": [
+        "Bluetooth",
+        "Cámara de reversa",
+        "Apple CarPlay / Android Auto",
+        "Control de crucero",
+        "Quemacocos",
+        "Asientos de cuero"
+      ],
+      "description": "2023 Honda Accord con historial verificado e inspección mecánica completa de 150 puntos.",
+      "images": [
+        {
+          "src": "images/vehicles/tm-1015-1.jpg",
+          "alt": "2023 Honda Accord"
+        },
+        {
+          "src": "images/vehicles/tm-1015-2.jpg",
+          "alt": "2023 Honda Accord – foto 2"
+        },
+        {
+          "src": "images/vehicles/tm-1015-3.jpg",
+          "alt": "2023 Honda Accord – foto 3"
+        },
+        {
+          "src": "images/vehicles/tm-1015-4.jpg",
+          "alt": "2023 Honda Accord – foto 4"
+        },
+        {
+          "src": "images/vehicles/tm-1015-5.jpg",
+          "alt": "2023 Honda Accord – foto 5"
+        }
+      ],
+      "publishedAt": "2026-09-27T00:00:00.000Z"
+    },
+    {
+      "id": "v-017",
+      "slug": "2023-honda-accord-tm-1016",
+      "stockNumber": "TM-1016",
+      "status": "available",
+      "featured": false,
+      "make": "Honda",
+      "model": "Accord",
+      "year": 2023,
+      "bodyType": "sedan",
+      "price": 26900,
+      "mileage": 27100,
+      "transmission": "automatic",
+      "fuelType": "gasoline",
+      "drivetrain": "fwd",
+      "engine": "1.5L Turbo",
+      "exteriorColor": "red",
+      "badges": [],
+      "features": [
+        "Bluetooth",
+        "Cámara de reversa",
+        "Apple CarPlay / Android Auto",
+        "Control de crucero",
+        "Quemacocos",
+        "Asientos de cuero"
+      ],
+      "description": "2023 Honda Accord con historial verificado e inspección mecánica completa de 150 puntos.",
+      "images": [
+        {
+          "src": "images/vehicles/tm-1016-1.jpg",
+          "alt": "2023 Honda Accord"
+        },
+        {
+          "src": "images/vehicles/tm-1016-2.jpg",
+          "alt": "2023 Honda Accord – foto 2"
+        },
+        {
+          "src": "images/vehicles/tm-1016-3.jpg",
+          "alt": "2023 Honda Accord – foto 3"
+        },
+        {
+          "src": "images/vehicles/tm-1016-4.jpg",
+          "alt": "2023 Honda Accord – foto 4"
+        },
+        {
+          "src": "images/vehicles/tm-1016-5.jpg",
+          "alt": "2023 Honda Accord – foto 5"
+        }
+      ],
+      "publishedAt": "2026-09-26T00:00:00.000Z"
+    },
+    {
+      "id": "v-018",
+      "slug": "2019-honda-accord-tm-1017",
+      "stockNumber": "TM-1017",
+      "status": "available",
+      "featured": false,
+      "make": "Honda",
+      "model": "Accord",
+      "year": 2019,
+      "bodyType": "sedan",
+      "price": 21900,
+      "mileage": 58400,
+      "transmission": "automatic",
+      "fuelType": "gasoline",
+      "drivetrain": "fwd",
+      "engine": "1.5L Turbo",
+      "exteriorColor": "silver",
+      "badges": [],
+      "features": [
+        "Bluetooth",
+        "Cámara de reversa",
+        "Apple CarPlay / Android Auto",
+        "Control de crucero",
+        "Quemacocos"
+      ],
+      "description": "2019 Honda Accord con historial verificado e inspección mecánica completa de 150 puntos.",
+      "images": [
+        {
+          "src": "images/vehicles/tm-1017-1.jpg",
+          "alt": "2019 Honda Accord"
+        },
+        {
+          "src": "images/vehicles/tm-1017-2.jpg",
+          "alt": "2019 Honda Accord – foto 2"
+        },
+        {
+          "src": "images/vehicles/tm-1017-3.jpg",
+          "alt": "2019 Honda Accord – foto 3"
+        },
+        {
+          "src": "images/vehicles/tm-1017-4.jpg",
+          "alt": "2019 Honda Accord – foto 4"
+        },
+        {
+          "src": "images/vehicles/tm-1017-5.jpg",
+          "alt": "2019 Honda Accord – foto 5"
+        }
+      ],
+      "publishedAt": "2026-09-25T00:00:00.000Z"
+    },
+    {
+      "id": "v-019",
+      "slug": "2021-toyota-corolla-se-tm-1018",
+      "stockNumber": "TM-1018",
+      "status": "available",
+      "featured": false,
+      "make": "Toyota",
+      "model": "Corolla",
+      "trim": "SE",
+      "year": 2021,
+      "bodyType": "sedan",
+      "price": 19900,
+      "mileage": 35200,
+      "transmission": "automatic",
+      "fuelType": "gasoline",
+      "drivetrain": "fwd",
+      "engine": "2.0L 4 cil.",
+      "exteriorColor": "white",
+      "badges": [],
+      "features": [
+        "Bluetooth",
+        "Cámara de reversa",
+        "Apple CarPlay / Android Auto",
+        "Control de crucero"
+      ],
+      "description": "2021 Toyota Corolla SE con historial verificado e inspección mecánica completa de 150 puntos.",
+      "images": [
+        {
+          "src": "images/vehicles/tm-1018-1.jpg",
+          "alt": "2021 Toyota Corolla SE"
+        },
+        {
+          "src": "images/vehicles/tm-1018-2.jpg",
+          "alt": "2021 Toyota Corolla SE – foto 2"
+        },
+        {
+          "src": "images/vehicles/tm-1018-3.jpg",
+          "alt": "2021 Toyota Corolla SE – foto 3"
+        },
+        {
+          "src": "images/vehicles/tm-1018-4.jpg",
+          "alt": "2021 Toyota Corolla SE – foto 4"
+        },
+        {
+          "src": "images/vehicles/tm-1018-5.jpg",
+          "alt": "2021 Toyota Corolla SE – foto 5"
+        }
+      ],
+      "publishedAt": "2026-09-24T00:00:00.000Z"
+    }
+  ]
+}

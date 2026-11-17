@@ -1,0 +1,64 @@
+{
+  "testimonials": [
+    {
+      "id": "c-001",
+      "name": "Carolina M.",
+      "location": "Miami, FL",
+      "vehicle": "2021 Toyota Camry SE",
+      "quote": "Pensé que con mi historial no me aprobarían. En menos de un día tenía las llaves y una cuota que sí podía pagar.",
+      "rating": 5,
+      "photo": { "src": "images/customers/c-001.jpg", "alt": "Carolina sonriendo junto a su auto" },
+      "deliveredAt": "2026-08-14"
+    },
+    {
+      "id": "c-002",
+      "name": "Jorge R.",
+      "location": "Hialeah, FL",
+      "vehicle": "2020 Toyota RAV4 XLE",
+      "quote": "Nos explicaron todo sin letra chica. Compramos nuestra primera SUV familiar y el trato fue de primera.",
+      "rating": 5,
+      "photo": { "src": "images/customers/c-002.jpg", "alt": "Jorge posando junto a su vehículo" },
+      "deliveredAt": "2026-07-29"
+    },
+    {
+      "id": "c-003",
+      "name": "Marisol A.",
+      "location": "Doral, FL",
+      "vehicle": "2020 Ford F-150 XLT",
+      "quote": "Necesitaba la camioneta para trabajar. Me consiguieron la mejor tasa y entregaron todo el mismo día.",
+      "rating": 5,
+      "photo": { "src": "images/customers/c-003.jpg", "alt": "Marisol junto a su auto" },
+      "deliveredAt": "2026-09-02"
+    },
+    {
+      "id": "c-004",
+      "name": "Daniel S.",
+      "location": "Kendall, FL",
+      "vehicle": "2020 Honda Civic Sport",
+      "quote": "Precalifiqué desde el celular, sin presión. El auto estaba impecable y tal como en las fotos.",
+      "rating": 5,
+      "photo": { "src": "images/customers/c-004.jpg", "alt": "Daniel junto a su auto" },
+      "deliveredAt": "2026-09-18"
+    },
+    {
+      "id": "c-005",
+      "name": "Rocío P.",
+      "location": "Miami Gardens, FL",
+      "vehicle": "2022 Hyundai Tucson SEL",
+      "quote": "Me atendieron por WhatsApp a cualquier hora. Cero sorpresas en el contrato. Totalmente recomendados.",
+      "rating": 5,
+      "photo": { "src": "images/customers/c-005.jpg", "alt": "Rocío apoyada en su auto" },
+      "deliveredAt": "2026-09-25"
+    },
+    {
+      "id": "c-006",
+      "name": "Valentina G.",
+      "location": "Coral Gables, FL",
+      "vehicle": "2021 Nissan Altima SV",
+      "quote": "Era mi primer crédito. Me guiaron paso a paso y hoy tengo auto propio y mejor historial.",
+      "rating": 4,
+      "photo": { "src": "images/customers/c-006.jpg", "alt": "Valentina junto a su auto" },
+      "deliveredAt": "2026-10-01"
+    }
+  ]
+}

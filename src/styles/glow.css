@@ -1,0 +1,191 @@
+/**
+ * Efecto "glowy hover" de https://codepen.io/inescodes/pen/PoxMyvX
+ *
+ * Mecánica original (se respeta tal cual):
+ *  1. Cada tarjeta tiene --hue/--saturation/--lightness -> --hsl.
+ *  2. Un overlay con un CLON de las tarjetas, tintado con --hsl, va encima.
+ *  3. El overlay se enmascara con un radial-gradient centrado en el puntero (--x/--y),
+ *     por lo que solo se "ilumina" el área cercana al cursor.
+ *  4. Hover directo sobre una tarjeta: --lightness: 95% y fondo hsla(var(--hsl), .1).
+ *
+ * Los estilos van en @layer components para que las utilidades de Tailwind puedan
+ * ajustar tamaños/espaciado; NO pongas utilidades de fondo/borde en .glow-card (las pisaría el overlay).
+ */
+
+@layer components {
+  /* ------------------------------------------------------------------ */
+  /* Grupo de tarjetas (GlowGroup)                                       */
+  /* ------------------------------------------------------------------ */
+  .glow-group {
+    position: relative;
+  }
+
+  .glow-overlay {
+    --x: -9999px;
+    --y: -9999px;
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    user-select: none;
+    opacity: var(--opacity, 0);
+    -webkit-mask: radial-gradient(25rem 25rem at var(--x) var(--y), #000 1%, transparent 50%);
+    mask: radial-gradient(25rem 25rem at var(--x) var(--y), #000 1%, transparent 50%);
+    transition: 400ms mask ease;
+    will-change: mask;
+  }
+
+  .glow-card {
+    --hue: 359;
+    --saturation: 69%;
+    --lightness: 50%;
+    --hsl: var(--hue), var(--saturation), var(--lightness);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    border: 1px solid rgb(0 47 73 / 0.1);
+    border-radius: 1.25rem;
+    color: var(--color-navy-900);
+  }
+
+  /* Alterna rojo y azul petróleo del logo. */
+  .glow-card:nth-child(even) { --hue: 202; --saturation: 100%; --lightness: 22%; }
+
+  .glow-overlay .glow-card {
+    background-color: hsla(var(--hsl), 0.15);
+    border-color: hsla(var(--hsl), 1);
+    box-shadow: 0 0 0 1px inset hsl(var(--hsl));
+  }
+
+  /*
+   * Medios (fotos) dentro de la tarjeta: en el clon se ocultan para que el tinte
+   * semitransparente se vea SOBRE la foto real de la capa base (el CodePen original solo tiene texto).
+   */
+  .glow-overlay .glow-media {
+    visibility: hidden;
+  }
+
+  :not(.glow-overlay) > .glow-card {
+    transition: 400ms background ease;
+    will-change: background;
+  }
+
+  :not(.glow-overlay) > .glow-card:hover {
+    --lightness: 95%;
+    background: hsla(var(--hsl), 0.1);
+  }
+
+  /* CTA dentro de la tarjeta: oscuro en reposo, sólido de color en el overlay. */
+  .glow-cta {
+    display: block;
+    margin-top: auto;
+    padding: 0.8em;
+    border-radius: 0.75rem;
+    text-align: center;
+    font-weight: 700;
+    color: #fff;
+    background-color: var(--color-navy-900);
+  }
+
+  .glow-overlay .glow-cta {
+    width: 100%;
+    background-color: hsl(var(--hsl));
+    box-shadow: 0 0 0 1px hsl(var(--hsl));
+  }
+
+  /* ------------------------------------------------------------------ */
+  /* Botones principales (GlowButton): mismo efecto, a escala de botón.   */
+  /* ------------------------------------------------------------------ */
+  .glow-btn {
+    --btn-bg: var(--color-navy-900);
+    --btn-fg: #fff;
+    --btn-glow-bg: var(--color-accent-500);
+    --btn-glow-fg: #fff;
+    position: relative;
+    isolation: isolate;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.6em;
+    overflow: hidden;
+    border-radius: 0.875rem;
+    font-weight: 700;
+    line-height: 1.1;
+    background-color: var(--btn-bg);
+    color: var(--btn-fg);
+    cursor: pointer;
+    transition:
+      transform 200ms ease,
+      box-shadow 300ms ease;
+  }
+
+  .glow-btn:hover:not(:disabled) {
+    transform: translateY(-1px);
+    box-shadow: 0 10px 28px -10px rgb(0 29 46 / 0.55);
+  }
+
+  .glow-btn:active:not(:disabled) {
+    transform: translateY(0);
+  }
+
+  .glow-btn:disabled {
+    cursor: not-allowed;
+    opacity: 0.6;
+  }
+
+  .glow-btn:focus-visible {
+    outline: 3px solid var(--color-accent-400);
+    outline-offset: 3px;
+  }
+
+  .glow-btn--accent {
+    --btn-bg: var(--color-accent-500);
+    --btn-fg: #fff;
+    --btn-glow-bg: var(--color-navy-900);
+    --btn-glow-fg: #fff;
+  }
+
+  .glow-btn--light {
+    --btn-bg: #fff;
+    --btn-fg: var(--color-navy-900);
+    --btn-glow-bg: var(--color-accent-500);
+    --btn-glow-fg: #fff;
+  }
+
+  .glow-btn__overlay {
+    --x: -9999px;
+    --y: -9999px;
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.6em;
+    padding: inherit;
+    pointer-events: none;
+    user-select: none;
+    background-color: var(--btn-glow-bg);
+    color: var(--btn-glow-fg);
+    opacity: var(--opacity, 0);
+    -webkit-mask: radial-gradient(9rem 9rem at var(--x) var(--y), #000 1%, transparent 50%);
+    mask: radial-gradient(9rem 9rem at var(--x) var(--y), #000 1%, transparent 50%);
+    transition: 400ms mask ease;
+    will-change: mask;
+  }
+
+  .glow-btn__label {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6em;
+  }
+}
+
+/* Sin puntero fino (táctil) no hay "hover": ocultamos el overlay. */
+@media (hover: none) {
+  .glow-overlay,
+  .glow-btn__overlay {
+    display: none;
+  }
+}
