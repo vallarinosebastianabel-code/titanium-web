@@ -13,13 +13,20 @@ const jakarta = Plus_Jakarta_Sans({
 
 export async function generateMetadata(): Promise<Metadata> {
   const { business } = await getSiteConfig();
+  const description =
+    "Financiamiento propio sin SSN (Social) en Hollywood, FL. Pasaporte, licencia, título limpio e inicial clara. Escribime a Sebastián por WhatsApp.";
   return {
     title: {
-      default: `${business.name} | Tu carro, aunque no tengas Social`,
+      default: `${business.name} | ${business.tagline.replace(/\.$/, "")}`,
       template: `%s | ${business.name}`,
     },
-    description: business.tagline,
-    openGraph: { title: business.name, description: business.tagline, type: "website", locale: "es_US" },
+    description,
+    openGraph: {
+      title: `${business.name} | ${business.tagline.replace(/\.$/, "")}`,
+      description,
+      type: "website",
+      locale: "es_US",
+    },
   };
 }
 

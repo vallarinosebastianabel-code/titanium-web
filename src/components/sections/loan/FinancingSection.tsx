@@ -18,7 +18,7 @@ export function FinancingSection({ loan, currency, whatsapp }: FinancingSectionP
         <Reveal animation="fade-in-bottom">
           <SectionHeading
             eyebrow="Financiamiento"
-            title="Mira tu inicial y tu cuota, con reglas claras"
+            title="Mirá tu inicial y tu cuota, con reglas claras"
           />
         </Reveal>
 

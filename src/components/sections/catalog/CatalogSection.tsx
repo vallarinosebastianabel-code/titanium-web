@@ -21,7 +21,11 @@ export function CatalogSection({ vehicles, searchIndex, currency, loan, whatsapp
     <section id="inventario" className="bg-surface py-24 sm:py-32">
       <div className="mx-auto max-w-7xl px-5 lg:px-8">
         <Reveal>
-          <SectionHeading eyebrow="Inventario" title="Carros listos para rodar" />
+          <SectionHeading
+            eyebrow="Inventario"
+            title="Carros listos para rodar"
+            description="Precio a financiar. Título limpio. Broward."
+          />
         </Reveal>
 
         <Reveal className="mt-10" delay={1} animation="fade-in-bottom">

@@ -310,7 +310,7 @@ export function VehicleModal({ vehicle, currency, loan, whatsapp, onClose }: Veh
               className="flex items-center justify-center gap-2 rounded-xl bg-[#25D366] px-5 py-4 font-bold text-navy-950 transition hover:bg-[#20bd5a] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#128C7E]"
             >
               <WhatsAppIcon width={22} height={22} />
-              Escribile a Sebastián por este carro
+              Escribime a Sebastián por este carro
             </a>
           </div>
         </div>

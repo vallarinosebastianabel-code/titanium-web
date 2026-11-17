@@ -33,7 +33,7 @@ export function ContactSection({ business }: { business: SiteConfig["business"] 
         <Reveal>
           <SectionHeading
             eyebrow="Contacto"
-            title={`Habla con ${business.contactName}. Te responde en minutos.`}
+            title={`Hablá con ${business.contactName}. Te responde en minutos.`}
             description="WhatsApp primero. Llamada después. Te ayudamos a elegir el carro y la inicial."
             className="[&_h2]:text-white [&_p]:text-white/70 [&_p:first-child]:text-accent-400"
           />

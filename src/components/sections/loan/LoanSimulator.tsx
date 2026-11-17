@@ -54,10 +54,10 @@ function ChooseVehicleFirst() {
       <span className="grid size-16 place-items-center rounded-2xl bg-accent-500/15 text-accent-600">
         <CarIcon width={32} height={32} />
       </span>
-      <h3 className="mt-6 text-2xl font-extrabold tracking-tight">Primero elige tu auto</h3>
+      <h3 className="mt-6 text-2xl font-extrabold tracking-tight">Primero elegí tu auto</h3>
       <p className="mt-3 max-w-md leading-relaxed text-navy-500">
-        La inicial y la cuota se calculan sobre el precio a financiar de un carro de nuestro inventario. Elige uno y
-        vuelve aquí.
+        La inicial y la cuota se calculan sobre el precio a financiar de un carro de nuestro inventario. Elegí uno y
+        volvé acá.
       </p>
       <GlowButton href="#inventario" variant="accent" size="lg" className="mt-8">
         Inventario
@@ -271,7 +271,7 @@ function Calculator({ config, currency, whatsapp, vehicle }: LoanSimulatorProps 
               size="lg"
               className="w-full"
             >
-              Escribile a Sebastián por WhatsApp
+              Escribime a Sebastián por WhatsApp
               <ArrowRightIcon width={20} height={20} />
             </GlowButton>
             <button
@@ -280,7 +280,7 @@ function Calculator({ config, currency, whatsapp, vehicle }: LoanSimulatorProps 
               onClick={() => setShowLeadForm(true)}
               disabled={!result}
             >
-              O déjanos tus datos
+              O dejá tus datos
             </button>
             <p className="flex items-center justify-center gap-2 text-center text-xs font-medium text-white/70">
               <ShieldIcon width={16} height={16} />

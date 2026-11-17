@@ -70,7 +70,7 @@ export function PrequalifyForm({ simulation, whatsapp, onCancel }: PrequalifyFor
           rel="noopener noreferrer"
           className="mt-4 inline-flex items-center gap-2 text-sm font-bold text-accent-600 hover:underline"
         >
-          <WhatsAppIcon width={18} height={18} /> Escribile a Sebastián por WhatsApp
+          <WhatsAppIcon width={18} height={18} /> Escribime a Sebastián por WhatsApp
         </a>
       </div>
     );

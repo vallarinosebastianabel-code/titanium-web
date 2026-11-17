@@ -4,6 +4,7 @@ import Link from "next/link";
 import { VehicleGrid } from "@/components/sections/catalog/VehicleGrid";
 import { VehicleSearchBar } from "@/components/sections/catalog/VehicleSearchBar";
 import { GlowButton } from "@/components/ui/GlowButton";
+import { kikoWhatsApp } from "@/lib/brand";
 import { DISCLAIMER_ES } from "@/lib/disclaimer";
 import { hasActiveFilters, parseFilters } from "@/lib/vehicle-filters";
 import type { BodyType } from "@/lib/schemas/vehicle";
@@ -11,7 +12,7 @@ import { getSiteConfig, getVehicleSearchIndex, getVehicles } from "@/services/da
 
 export const metadata: Metadata = {
   title: "Inventario",
-  description: "Carros listos para rodar en Broward. Título limpio. Precio a financiar.",
+  description: "Carros listos para rodar en Broward. Título limpio (Clean Title). Precio a financiar, no de contado.",
 };
 
 const BODY_CHIPS: Array<{ id: BodyType | ""; label: string }> = [
@@ -40,7 +41,7 @@ export default async function InventoryPage({ searchParams }: PageProps<"/invent
       <div className="mx-auto max-w-7xl px-5 lg:px-8">
         <h1 className="text-3xl font-extrabold tracking-tight sm:text-4xl">Inventario</h1>
         <p className="mt-3 max-w-2xl text-navy-600">
-          Precio a financiar. Título limpio. Elige el tipo de carro que necesitas.
+          Precio a financiar. Título limpio. Elegí el tipo de carro que necesitás.
         </p>
 
         <VehicleSearchBar
@@ -72,7 +73,11 @@ export default async function InventoryPage({ searchParams }: PageProps<"/invent
 
         <div className="mt-4 flex flex-wrap items-center gap-2 text-sm">
           <span className="font-semibold text-navy-600">
-            {noMatches ? "Sin coincidencias exactas · mostrando todo el stock" : `${list.length} carros`}
+            {list.length === 0
+              ? "No hay carros publicados ahora"
+              : noMatches
+                ? "Sin coincidencias · te mostramos el stock completo"
+                : `${list.length} carros`}
           </span>
           {hasFilters && (
             <Link href="/inventario" className="font-bold text-accent-600 hover:underline">
@@ -82,7 +87,24 @@ export default async function InventoryPage({ searchParams }: PageProps<"/invent
         </div>
 
         <div className="mt-10">
-          <VehicleGrid vehicles={list} currency={currency} loan={site.loan} whatsapp={site.business.whatsapp} />
+          {list.length === 0 ? (
+            <div className="rounded-3xl bg-white px-6 py-14 text-center shadow-card">
+              <p className="text-lg font-extrabold tracking-tight">Por ahora no hay unidades en la web</p>
+              <p className="mt-2 text-navy-600">Escribime a Sebastián y te contamos qué está entrando.</p>
+              <GlowButton
+                href={kikoWhatsApp(site.business)}
+                target="_blank"
+                rel="noopener noreferrer"
+                variant="accent"
+                size="lg"
+                className="mt-6"
+              >
+                Escribime por WhatsApp
+              </GlowButton>
+            </div>
+          ) : (
+            <VehicleGrid vehicles={list} currency={currency} loan={site.loan} whatsapp={site.business.whatsapp} />
+          )}
         </div>
 
         <p className="mx-auto mt-10 max-w-3xl text-center text-xs leading-relaxed text-navy-400">{DISCLAIMER_ES}</p>

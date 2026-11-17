@@ -69,8 +69,8 @@ export function VehicleSearchBar({ index, initial = {}, className }: VehicleSear
       className={cn("rounded-3xl bg-white p-4 shadow-card ring-1 ring-navy-100 sm:p-5", className)}
     >
       <div className="flex flex-wrap items-baseline gap-x-3 gap-y-1 px-1">
-        <h3 className="text-xl font-extrabold tracking-tight sm:text-2xl">¿Qué carro buscas?</h3>
-        <p className="text-sm text-navy-500">Busca por marca o modelo, tipo o año.</p>
+        <h3 className="text-xl font-extrabold tracking-tight sm:text-2xl">¿Qué carro buscás?</h3>
+        <p className="text-sm text-navy-500">Buscá por marca o modelo, tipo o año.</p>
       </div>
 
       <div className="mt-4 grid gap-2 rounded-2xl bg-surface p-2 ring-1 ring-navy-100 sm:grid-cols-2 lg:grid-cols-[repeat(3,minmax(0,1fr))_auto] lg:items-center lg:gap-0">
@@ -83,7 +83,7 @@ export function VehicleSearchBar({ index, initial = {}, className }: VehicleSear
             type="search"
             value={q}
             onChange={(e) => setQ(e.target.value)}
-            placeholder="¿Qué tienes en mente?"
+            placeholder="¿Qué tenés en mente?"
             autoComplete="off"
             className="h-8 w-full bg-transparent text-[0.95rem] font-semibold text-navy-900 outline-none placeholder:font-medium placeholder:text-navy-400"
           />

@@ -8,17 +8,17 @@ import type { SiteConfig } from "@/lib/schemas/site";
 const STEPS = [
   {
     n: "1",
-    title: "Elige tu carro",
+    title: "Elegí tu carro",
     text: "Sedán, SUV, pickup o minivan. Todos con título limpio.",
   },
   {
     n: "2",
-    title: "Trae pasaporte y licencia",
+    title: "Traé pasaporte y licencia",
     text: "Pocos papeles. Sin vueltas.",
   },
   {
     n: "3",
-    title: "Sal manejando",
+    title: "Salí manejando",
     text: "El mismo día, sujeto a aprobación.",
   },
 ];
@@ -48,7 +48,7 @@ export function HowItWorks({ business }: { business: SiteConfig["business"] }) {
         <div className="mt-12 flex justify-center">
           <GlowButton href={kikoWhatsApp(business)} target="_blank" rel="noopener noreferrer" variant="accent" size="lg">
             <WhatsAppIcon width={20} height={20} />
-            Escríbenos
+            Escribime
           </GlowButton>
         </div>
       </div>

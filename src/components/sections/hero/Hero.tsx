@@ -1,8 +1,9 @@
 import Image from "next/image";
 
 import { GlowButton } from "@/components/ui/GlowButton";
-import { ArrowRightIcon, CheckIcon } from "@/components/ui/icons";
+import { ArrowRightIcon, CheckIcon, WhatsAppIcon } from "@/components/ui/icons";
 import { assetUrl } from "@/lib/assets";
+import { kikoWhatsApp } from "@/lib/brand";
 import type { SiteConfig } from "@/lib/schemas/site";
 
 import { HeroCarousel } from "./HeroCarousel";
@@ -10,13 +11,14 @@ import { HeroVideo } from "./HeroVideo";
 
 interface HeroProps {
   hero: SiteConfig["hero"];
+  business: SiteConfig["business"];
 }
 
 /**
  * Server Component: el copy y el póster salen en el HTML inicial (SSR/SEO/LCP).
  * Solo el video es Client Component.
  */
-export function Hero({ hero }: HeroProps) {
+export function Hero({ hero, business }: HeroProps) {
   const { media } = hero;
 
   return (
@@ -56,10 +58,22 @@ export function Hero({ hero }: HeroProps) {
             ))}
           </ul>
 
-          <GlowButton href="/inventario" variant="accent" size="lg" className="mt-10">
-            Ver inventario
-            <ArrowRightIcon width={20} height={20} />
-          </GlowButton>
+          <div className="mt-10 flex flex-wrap items-center justify-center gap-3">
+            <GlowButton
+              href={kikoWhatsApp(business)}
+              target="_blank"
+              rel="noopener noreferrer"
+              variant="accent"
+              size="lg"
+            >
+              <WhatsAppIcon width={20} height={20} />
+              Escribime por WhatsApp
+            </GlowButton>
+            <GlowButton href="/inventario" variant="light" size="lg">
+              Ver inventario
+              <ArrowRightIcon width={20} height={20} />
+            </GlowButton>
+          </div>
         </div>
 
         <div>

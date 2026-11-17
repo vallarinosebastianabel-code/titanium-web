@@ -65,14 +65,14 @@ export function FaqSection({ faqs, whatsapp }: FaqSectionProps) {
         </Reveal>
 
         <p className="mt-10 text-center text-navy-600">
-          ¿No encuentras tu respuesta?{" "}
+          ¿No encontrás tu respuesta?{" "}
           <a
             href={whatsappLink(whatsapp, "Hola Sebastián, tengo una pregunta sobre un carro.")}
             target="_blank"
             rel="noopener noreferrer"
             className="font-bold text-accent-600 underline-offset-4 hover:underline"
           >
-            Escribile a Kiko por WhatsApp
+            Escribime a Sebastián por WhatsApp
           </a>
         </p>
       </div>

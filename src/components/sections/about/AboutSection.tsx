@@ -1,8 +1,5 @@
-import { GlowButton } from "@/components/ui/GlowButton";
-import { WhatsAppIcon } from "@/components/ui/icons";
 import { Reveal } from "@/components/ui/Reveal";
 import { SectionHeading } from "@/components/ui/SectionHeading";
-import { kikoWhatsApp } from "@/lib/brand";
 import type { SiteConfig } from "@/lib/schemas/site";
 
 export function AboutSection({ business }: { business: SiteConfig["business"] }) {
@@ -16,7 +13,7 @@ export function AboutSection({ business }: { business: SiteConfig["business"] })
           <SectionHeading
             eyebrow="Quiénes somos"
             title="Titanium es seriedad."
-            description={`${place}. Financiamiento propio para hispanos que necesitan moverse.`}
+            description={`${place}. Financiamiento propio sin SSN para quien necesita moverse.`}
           />
         </Reveal>
 
@@ -26,27 +23,21 @@ export function AboutSection({ business }: { business: SiteConfig["business"] })
               <p className="text-xs font-bold uppercase tracking-[0.16em] text-accent-400">Dealer</p>
               <h3 className="mt-3 text-2xl font-extrabold">Titanium South Florida</h3>
               <p className="mt-3 leading-relaxed text-white/80">
-                El negocio que respalda: carros listos para rodar, título limpio y reglas claras. Resistente, simple y
-                de largo plazo.
+                El negocio que respalda: carros listos para rodar, título limpio y reglas claras. Acá {business.voiceName}{" "}
+                te consigue el carro.
               </p>
             </article>
           </Reveal>
           <Reveal animation="fade-in-right" delay={2}>
             <article className="h-full rounded-3xl border border-navy-100 bg-white p-7">
-              <p className="text-xs font-bold uppercase tracking-[0.16em] text-accent-600">Broker</p>
-              <h3 className="mt-3 text-2xl font-extrabold">Sebastián - Lobo</h3>
+              <p className="text-xs font-bold uppercase tracking-[0.16em] text-accent-600">WhatsApp</p>
+              <h3 className="mt-3 text-2xl font-extrabold">{business.contactName}</h3>
               <p className="mt-3 leading-relaxed text-navy-600">
-                La cara cercana. {business.contactName} te atiende por WhatsApp y por teléfono: {business.phone}.
+                Te responde por WhatsApp y por teléfono: {business.phone}. Inicial, papeles y disponibilidad, carro por
+                carro.
               </p>
             </article>
           </Reveal>
-        </div>
-
-        <div className="mt-10 flex justify-center">
-          <GlowButton href={kikoWhatsApp(business)} target="_blank" rel="noopener noreferrer" size="lg">
-            <WhatsAppIcon width={20} height={20} />
-            Habla con {business.contactName}
-          </GlowButton>
         </div>
       </div>
     </section>

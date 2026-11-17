@@ -21,7 +21,7 @@ export default async function HomePage() {
 
   return (
     <>
-      <Hero hero={site.hero} />
+      <Hero hero={site.hero} business={site.business} />
       <HowItWorks business={site.business} />
       <CatalogSection
         vehicles={featured}

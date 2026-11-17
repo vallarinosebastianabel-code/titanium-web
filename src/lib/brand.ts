@@ -10,6 +10,6 @@ export function kikoWhatsApp(business: SiteConfig["business"], message?: string)
 export function vehicleWhatsApp(whatsapp: string, title: string, stockNumber: string) {
   return whatsappLink(
     whatsapp,
-    `Hola Sebastián, me interesa el ${title} (Stock ${stockNumber}). ¿Me confirmas inicial y si está disponible?`,
+    `Hola Sebastián, me interesa el ${title} (Stock ${stockNumber}). ¿Me confirmás inicial y si está disponible?`,
   );
 }

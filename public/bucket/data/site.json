@@ -1,7 +1,7 @@
 {
   "business": {
     "name": "Titanium South Florida",
-    "tagline": "Tu carro, aunque no tengas Social.",
+    "tagline": "Tu carro, aunque no tengas SSN.",
     "contactName": "Sebastián",
     "voiceName": "Kiko",
     "phone": "(305) 464-8968",
@@ -12,7 +12,6 @@
       "state": "FL",
       "zip": "33023",
       "area": "Broward",
-      "landmark": "Esquina",
       "mapUrl": "https://www.google.com/maps/search/?api=1&query=5800+Funston+St,+Hollywood,+FL+33023"
     },
     "hours": [
@@ -43,7 +42,7 @@
     "highlights": [
       "Solo pasaporte y licencia",
       "Título limpio (Clean Title)",
-      "Inicial desde $2,000*"
+      "Inicial desde $2,000* · carro por carro"
     ],
     "deliveries": [
       {
