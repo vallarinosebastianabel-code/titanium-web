@@ -6,8 +6,6 @@ import { CloseIcon, MenuIcon } from "@/components/ui/icons";
 import { Link } from "@/i18n/navigation";
 import { cn } from "@/lib/format";
 
-import { LocaleSwitcher } from "./LocaleSwitcher";
-
 type NavItem = { href: "/#como-funciona" | "/#inventario" | "/#financiamiento" | "/#quienes-somos" | "/#faq" | "/#contacto"; label: string };
 
 interface MobileNavProps {
@@ -67,9 +65,6 @@ export function MobileNav({ items, openLabel, closeLabel, menuLabel }: MobileNav
               {item.label}
             </Link>
           ))}
-          <div className="mt-3 border-t border-navy-100 pt-4">
-            <LocaleSwitcher />
-          </div>
         </nav>
       </div>
 

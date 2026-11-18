@@ -59,7 +59,7 @@ export async function Header({ business }: { business: SiteConfig["business"] })
               </Link>
             ))}
           </nav>
-          <LocaleSwitcher className="hidden lg:flex" />
+          <LocaleSwitcher />
         </div>
       </div>
     </header>
