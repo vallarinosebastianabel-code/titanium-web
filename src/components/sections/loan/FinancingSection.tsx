@@ -1,3 +1,5 @@
+import { getTranslations } from "next-intl/server";
+
 import { Reveal } from "@/components/ui/Reveal";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import type { CurrencyFormat, SiteConfig } from "@/lib/schemas/site";
@@ -11,15 +13,14 @@ interface FinancingSectionProps {
 }
 
 /** Server Component: el encabezado es HTML estático; solo el simulador hidrata. */
-export function FinancingSection({ loan, currency, whatsapp }: FinancingSectionProps) {
+export async function FinancingSection({ loan, currency, whatsapp }: FinancingSectionProps) {
+  const t = await getTranslations("Financing");
+
   return (
     <section id="financiamiento" className="bg-white py-24 sm:py-32">
       <div className="mx-auto max-w-7xl px-5 lg:px-8">
         <Reveal animation="fade-in-bottom">
-          <SectionHeading
-            eyebrow="Financiamiento"
-            title="Mirá tu inicial y tu cuota, con reglas claras"
-          />
+          <SectionHeading eyebrow={t("eyebrow")} title={t("title")} />
         </Reveal>
 
         <Reveal animation="fade-in-bottom" delay={2} className="mt-14">

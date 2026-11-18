@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { useRouter } from "next/navigation";
+import { useTranslations } from "next-intl";
 import { useEffect, useMemo, useRef, useState, type KeyboardEvent } from "react";
 import { createPortal } from "react-dom";
 
@@ -12,9 +12,9 @@ import {
   ShieldIcon,
   WhatsAppIcon,
 } from "@/components/ui/icons";
+import { useRouter } from "@/i18n/navigation";
 import { assetUrl } from "@/lib/assets";
 import { vehicleWhatsApp } from "@/lib/brand";
-import { DISCLAIMER_ES } from "@/lib/disclaimer";
 import { defaultDownPayment } from "@/lib/finance";
 import { cn, formatCurrency, formatNumber, vehicleTitle } from "@/lib/format";
 import type { CurrencyFormat, SiteConfig } from "@/lib/schemas/site";
@@ -22,12 +22,18 @@ import { selectVehicle } from "@/lib/selected-vehicle";
 import type { Vehicle } from "@/lib/schemas/vehicle";
 import { BODY_LABEL } from "@/lib/vehicle-filters";
 
-const FUEL_LABEL: Record<Vehicle["fuelType"], string> = {
-  gasoline: "Gasolina",
-  diesel: "Diésel",
-  hybrid: "Híbrido",
-  electric: "Eléctrico",
-};
+function bodyTypeLabel(type: Vehicle["bodyType"], tCatalog: ReturnType<typeof useTranslations<"Catalog">>): string {
+  switch (type) {
+    case "van":
+      return tCatalog("minivan");
+    case "sedan":
+    case "suv":
+    case "pickup":
+      return tCatalog(type);
+    default:
+      return BODY_LABEL[type];
+  }
+}
 
 const COLOR_LABEL: Record<string, string> = {
   white: "Blanco",
@@ -60,6 +66,9 @@ export interface VehicleModalProps {
  * Se monta solo al abrirlo (ver VehicleDetailsButton), por eso puede usar `document` sin guardas.
  */
 export function VehicleModal({ vehicle, currency, loan, whatsapp, onClose }: VehicleModalProps) {
+  const t = useTranslations("Vehicle");
+  const tCatalog = useTranslations("Catalog");
+  const tWa = useTranslations("WhatsApp");
   const router = useRouter();
   const dialogRef = useRef<HTMLDialogElement>(null);
   const [index, setIndex] = useState(0);
@@ -122,15 +131,15 @@ export function VehicleModal({ vehicle, currency, loan, whatsapp, onClose }: Veh
   const interior = colorLabel(vehicle.interiorColor);
 
   const specs: Array<[string, string]> = [
-    ["Stock", vehicle.stockNumber],
-    ["Millas", `${formatNumber(vehicle.mileage, currency.locale)} mi`],
-    ["Año", String(vehicle.year)],
-    ["Tipo", BODY_LABEL[vehicle.bodyType]],
-    ["Transmisión", vehicle.transmission === "automatic" ? "Automática" : "Manual"],
-    ["Combustible", FUEL_LABEL[vehicle.fuelType]],
-    ...(exterior ? ([["Color exterior", exterior]] as Array<[string, string]>) : []),
-    ...(interior ? ([["Color interior", interior]] as Array<[string, string]>) : []),
-    ...(vehicle.vin ? ([["VIN", vehicle.vin]] as Array<[string, string]>) : []),
+    [t("stock"), vehicle.stockNumber],
+    [t("miles"), `${formatNumber(vehicle.mileage, currency.locale)} mi`],
+    [t("year"), String(vehicle.year)],
+    [t("type"), bodyTypeLabel(vehicle.bodyType, tCatalog)],
+    [t("transmission"), vehicle.transmission === "automatic" ? t("automatic") : t("manual")],
+    [t("fuel"), t(vehicle.fuelType)],
+    ...(exterior ? ([[t("exterior"), exterior]] as Array<[string, string]>) : []),
+    ...(interior ? ([[t("interior"), interior]] as Array<[string, string]>) : []),
+    ...(vehicle.vin ? ([[t("vin"), vehicle.vin]] as Array<[string, string]>) : []),
   ];
 
   const onKeyDown = (e: KeyboardEvent<HTMLDialogElement>) => {
@@ -186,7 +195,7 @@ export function VehicleModal({ vehicle, currency, loan, whatsapp, onClose }: Veh
                 <button
                   type="button"
                   onClick={() => go(-1)}
-                  aria-label="Foto anterior"
+                  aria-label={t("prev")}
                   className="absolute left-3 top-1/2 grid size-11 -translate-y-1/2 place-items-center rounded-xl bg-white text-navy-900 shadow-card transition hover:scale-105 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent-400"
                 >
                   <ChevronLeftIcon />
@@ -194,7 +203,7 @@ export function VehicleModal({ vehicle, currency, loan, whatsapp, onClose }: Veh
                 <button
                   type="button"
                   onClick={() => go(1)}
-                  aria-label="Foto siguiente"
+                  aria-label={t("next")}
                   className="absolute right-3 top-1/2 grid size-11 -translate-y-1/2 place-items-center rounded-xl bg-white text-navy-900 shadow-card transition hover:scale-105 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent-400"
                 >
                   <ChevronRightIcon />
@@ -210,12 +219,12 @@ export function VehicleModal({ vehicle, currency, loan, whatsapp, onClose }: Veh
               onClick={() => setZoom(true)}
               className="absolute bottom-3 right-3 rounded-xl bg-white px-4 py-2 text-sm font-bold text-navy-900 shadow-card transition hover:scale-105 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent-400"
             >
-              Ampliar
+              {t("zoom")}
             </button>
           </div>
 
           {multiple && (
-            <ul className="mt-3 grid grid-cols-4 gap-2" aria-label="Fotos del vehículo">
+            <ul className="mt-3 grid grid-cols-4 gap-2" aria-label={t("gallery")}>
               {images.map((image, i) => (
                 <li key={image.src}>
                   <button
@@ -248,7 +257,7 @@ export function VehicleModal({ vehicle, currency, loan, whatsapp, onClose }: Veh
           <button
             type="button"
             onClick={onClose}
-            aria-label="Cerrar"
+            aria-label={t("close")}
             className="absolute right-4 top-4 grid size-10 place-items-center rounded-xl border border-navy-100 bg-white text-navy-700 transition hover:bg-navy-50 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent-500"
           >
             <CloseIcon />
@@ -301,16 +310,21 @@ export function VehicleModal({ vehicle, currency, loan, whatsapp, onClose }: Veh
               className="flex items-center justify-center gap-2 rounded-xl bg-navy-900 px-5 py-4 text-center font-bold text-white transition hover:bg-navy-800 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent-500"
             >
               <ShieldIcon width={20} height={20} />
-              Ver inicial de este carro
+              {t("seeDown")}
             </button>
             <a
-              href={vehicleWhatsApp(whatsapp, title, vehicle.stockNumber)}
+              href={vehicleWhatsApp(
+                whatsapp,
+                title,
+                vehicle.stockNumber,
+                tWa("vehicle", { title, stock: vehicle.stockNumber }),
+              )}
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center justify-center gap-2 rounded-xl bg-[#25D366] px-5 py-4 font-bold text-navy-950 transition hover:bg-[#20bd5a] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#128C7E]"
             >
               <WhatsAppIcon width={22} height={22} />
-              Escribime a Sebastián por este carro
+              {t("whatsapp")}
             </a>
           </div>
         </div>
@@ -333,7 +347,7 @@ export function VehicleModal({ vehicle, currency, loan, whatsapp, onClose }: Veh
           <button
             type="button"
             onClick={() => setZoom(false)}
-            aria-label="Cerrar imagen ampliada"
+            aria-label={t("closeZoom")}
             autoFocus
             className="absolute right-4 top-4 grid size-11 place-items-center rounded-xl bg-white text-navy-900 shadow-card focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent-400"
           >
@@ -347,7 +361,7 @@ export function VehicleModal({ vehicle, currency, loan, whatsapp, onClose }: Veh
                   e.stopPropagation();
                   go(-1);
                 }}
-                aria-label="Foto anterior"
+                aria-label={t("prev")}
                 className="absolute left-4 top-1/2 grid size-11 -translate-y-1/2 place-items-center rounded-xl bg-white text-navy-900 shadow-card"
               >
                 <ChevronLeftIcon />
@@ -358,7 +372,7 @@ export function VehicleModal({ vehicle, currency, loan, whatsapp, onClose }: Veh
                   e.stopPropagation();
                   go(1);
                 }}
-                aria-label="Foto siguiente"
+                aria-label={t("next")}
                 className="absolute right-4 top-1/2 grid size-11 -translate-y-1/2 place-items-center rounded-xl bg-white text-navy-900 shadow-card"
               >
                 <ChevronRightIcon />

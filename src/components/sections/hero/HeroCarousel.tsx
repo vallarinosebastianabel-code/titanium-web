@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { getTranslations } from "next-intl/server";
 
 import { assetUrl } from "@/lib/assets";
 import type { SiteConfig } from "@/lib/schemas/site";
@@ -28,11 +29,13 @@ function DeliveryCard({ delivery, clone }: { delivery: Delivery; clone?: boolean
  * Carrusel continuo con clientes recibiendo sus llaves. Server Component: solo CSS
  * (se pausa al pasar el cursor y se vuelve desplazable con `prefers-reduced-motion`).
  */
-export function HeroCarousel({ deliveries }: { deliveries: Delivery[] }) {
+export async function HeroCarousel({ deliveries }: { deliveries: Delivery[] }) {
   if (deliveries.length === 0) return null;
 
+  const t = await getTranslations("Hero");
+
   return (
-    <section aria-label="Clientes felices recibiendo sus llaves" className="marquee -mx-5 lg:-mx-8">
+    <section aria-label={t("carouselAria")} className="marquee -mx-5 lg:-mx-8">
       <div className="marquee__track px-2">
         {deliveries.map((d) => (
           <DeliveryCard key={d.src} delivery={d} />

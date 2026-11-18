@@ -1,8 +1,8 @@
 "use client";
 
-import Link from "next/link";
-import { usePathname } from "next/navigation";
 import type { MouseEvent, ReactNode } from "react";
+
+import { Link, usePathname } from "@/i18n/navigation";
 
 interface HomeLinkProps {
   className?: string;
@@ -17,7 +17,10 @@ export function HomeLink({ children, ...rest }: HomeLinkProps) {
   const onClick = (e: MouseEvent<HTMLAnchorElement>) => {
     if (pathname !== "/" || e.metaKey || e.ctrlKey || e.shiftKey || e.button !== 0) return;
     e.preventDefault();
-    if (window.location.hash) window.history.replaceState(window.history.state, "", "/");
+    if (window.location.hash) {
+      const { pathname: path } = window.location;
+      window.history.replaceState(window.history.state, "", path);
+    }
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
 

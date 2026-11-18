@@ -1,6 +1,7 @@
 "use client";
 
 import dynamic from "next/dynamic";
+import { useTranslations } from "next-intl";
 import { useCallback, useState } from "react";
 
 import type { CurrencyFormat, SiteConfig } from "@/lib/schemas/site";
@@ -19,6 +20,7 @@ interface VehicleDetailsButtonProps {
 
 /** Botón "Me interesa" de la tarjeta: abre el modal de detalle del vehículo. */
 export function VehicleDetailsButton({ vehicle, title, currency, loan, whatsapp }: VehicleDetailsButtonProps) {
+  const t = useTranslations("Catalog");
   const [open, setOpen] = useState(false);
   const close = useCallback(() => setOpen(false), []);
 
@@ -27,11 +29,11 @@ export function VehicleDetailsButton({ vehicle, title, currency, loan, whatsapp 
       <button
         type="button"
         className="glow-cta mt-1 w-full cursor-pointer"
-        aria-label={`Ver detalles: ${title}`}
+        aria-label={t("detailsAria", { title })}
         aria-haspopup="dialog"
         onClick={() => setOpen(true)}
       >
-        Ver detalles
+        {t("details")}
       </button>
       {open && (
         <VehicleModal vehicle={vehicle} currency={currency} loan={loan} whatsapp={whatsapp} onClose={close} />

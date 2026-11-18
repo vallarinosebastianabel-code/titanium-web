@@ -1,17 +1,28 @@
+import { getTranslations } from "next-intl/server";
+
 import { PlusIcon } from "@/components/ui/icons";
 import { Reveal } from "@/components/ui/Reveal";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { whatsappLink } from "@/lib/format";
 import type { FaqItem } from "@/lib/schemas/content";
 
-const CATEGORY_LABEL: Record<FaqItem["category"], string> = {
-  financiamiento: "Financiamiento",
-  requisitos: "Requisitos",
-  inventario: "Inventario",
+const FAQ_IDS = ["f01", "f02", "f03", "f04", "f05", "f06", "f07", "f08", "f09"] as const;
+
+const FAQ_CATEGORY: Record<(typeof FAQ_IDS)[number], FaqItem["category"]> = {
+  f01: "requisitos",
+  f02: "requisitos",
+  f03: "requisitos",
+  f04: "financiamiento",
+  f05: "inventario",
+  f06: "financiamiento",
+  f07: "financiamiento",
+  f08: "requisitos",
+  f09: "inventario",
 };
 
 interface FaqSectionProps {
-  faqs: FaqItem[];
+  /** Opcional: si no se pasa, las preguntas salen de `messages` (Faq.items). */
+  faqs?: FaqItem[];
   whatsapp: string;
 }
 
@@ -19,7 +30,25 @@ interface FaqSectionProps {
  * Acordeón 100% servidor: usa <details name="faq"> (accordion exclusivo nativo),
  * sin JavaScript de hidratación. El contenido abre con una animación de Animista.
  */
-export function FaqSection({ faqs, whatsapp }: FaqSectionProps) {
+export async function FaqSection({ faqs: faqsProp, whatsapp }: FaqSectionProps) {
+  const t = await getTranslations("Faq");
+  const tWa = await getTranslations("WhatsApp");
+
+  const faqs: FaqItem[] =
+    faqsProp ??
+    FAQ_IDS.map((id) => ({
+      id,
+      category: FAQ_CATEGORY[id],
+      question: t(`items.${id}.q`),
+      answer: t(`items.${id}.a`),
+    }));
+
+  const categoryLabel = (category: FaqItem["category"]) => {
+    if (category === "financiamiento") return t("financing");
+    if (category === "requisitos") return t("requirements");
+    return t("inventory");
+  };
+
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
@@ -36,11 +65,7 @@ export function FaqSection({ faqs, whatsapp }: FaqSectionProps) {
 
       <div className="mx-auto max-w-3xl px-5 lg:px-8">
         <Reveal>
-          <SectionHeading
-            eyebrow="Preguntas frecuentes"
-            title="Lo que más nos preguntan"
-            description="Sin SSN, inicial, título limpio y cómo salir manejando. En pocas palabras."
-          />
+          <SectionHeading eyebrow={t("eyebrow")} title={t("title")} description={t("description")} />
         </Reveal>
 
         <Reveal delay={2} className="mt-12">
@@ -50,7 +75,7 @@ export function FaqSection({ faqs, whatsapp }: FaqSectionProps) {
                 <summary className="flex cursor-pointer list-none items-center justify-between gap-4 px-6 py-5 text-left font-bold marker:hidden hover:bg-navy-50/60 focus-visible:outline-2 focus-visible:-outline-offset-2 focus-visible:outline-accent-500 sm:px-8 [&::-webkit-details-marker]:hidden">
                   <span>
                     <span className="mb-0.5 block text-xs font-bold uppercase tracking-wider text-accent-600">
-                      {CATEGORY_LABEL[faq.category]}
+                      {categoryLabel(faq.category)}
                     </span>
                     {faq.question}
                   </span>
@@ -65,14 +90,14 @@ export function FaqSection({ faqs, whatsapp }: FaqSectionProps) {
         </Reveal>
 
         <p className="mt-10 text-center text-navy-600">
-          ¿No encontrás tu respuesta?{" "}
+          {t("more")}{" "}
           <a
-            href={whatsappLink(whatsapp, "Hola Sebastián, tengo una pregunta sobre un carro.")}
+            href={whatsappLink(whatsapp, tWa("faq"))}
             target="_blank"
             rel="noopener noreferrer"
             className="font-bold text-accent-600 underline-offset-4 hover:underline"
           >
-            Escribime a Sebastián por WhatsApp
+            {t("whatsapp")}
           </a>
         </p>
       </div>

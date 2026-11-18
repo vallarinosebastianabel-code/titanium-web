@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { getTranslations } from "next-intl/server";
 
 import { GlowButton } from "@/components/ui/GlowButton";
 import { ArrowRightIcon, CheckIcon, WhatsAppIcon } from "@/components/ui/icons";
@@ -18,8 +19,11 @@ interface HeroProps {
  * Server Component: el copy y el póster salen en el HTML inicial (SSR/SEO/LCP).
  * Solo el video es Client Component.
  */
-export function Hero({ hero, business }: HeroProps) {
+export async function Hero({ hero, business }: HeroProps) {
+  const t = await getTranslations("Hero");
+  const tWa = await getTranslations("WhatsApp");
   const { media } = hero;
+  const highlights = [t("highlight1"), t("highlight2"), t("highlight3")];
 
   return (
     <section id="inicio" className="relative isolate flex min-h-svh items-center overflow-hidden bg-navy-950 text-white">
@@ -44,11 +48,11 @@ export function Hero({ hero, business }: HeroProps) {
       <div className="mx-auto flex w-full max-w-7xl flex-col gap-10 px-5 pb-12 pt-28 lg:px-8">
         <div className="flex flex-col items-center text-center">
           <h1 className="max-w-4xl text-balance text-4xl font-extrabold leading-[1.05] tracking-tight sm:text-5xl lg:text-6xl">
-            {hero.headline}
+            {t("headline")}
           </h1>
 
           <ul className="mt-8 flex flex-wrap justify-center gap-x-8 gap-y-3 text-sm font-semibold text-white/90">
-            {hero.highlights.map((item) => (
+            {highlights.map((item) => (
               <li key={item} className="flex items-center gap-2">
                 <span className="grid size-5 place-items-center rounded-full bg-accent-500 text-white">
                   <CheckIcon width={12} height={12} strokeWidth={3.5} />
@@ -60,17 +64,20 @@ export function Hero({ hero, business }: HeroProps) {
 
           <div className="mt-10 flex flex-wrap items-center justify-center gap-3">
             <GlowButton
-              href={kikoWhatsApp(business)}
+              href={kikoWhatsApp(
+                business,
+                tWa("default", { name: business.contactName, business: business.name }),
+              )}
               target="_blank"
               rel="noopener noreferrer"
               variant="accent"
               size="lg"
             >
               <WhatsAppIcon width={20} height={20} />
-              Escribime por WhatsApp
+              {t("ctaWhatsApp")}
             </GlowButton>
             <GlowButton href="/inventario" variant="light" size="lg">
-              Ver inventario
+              {t("ctaInventory")}
               <ArrowRightIcon width={20} height={20} />
             </GlowButton>
           </div>

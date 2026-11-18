@@ -1,29 +1,38 @@
 import type { Metadata } from "next";
-import Link from "next/link";
+import { getTranslations, setRequestLocale } from "next-intl/server";
 
 import { VehicleGrid } from "@/components/sections/catalog/VehicleGrid";
 import { VehicleSearchBar } from "@/components/sections/catalog/VehicleSearchBar";
 import { GlowButton } from "@/components/ui/GlowButton";
+import { Link } from "@/i18n/navigation";
 import { kikoWhatsApp } from "@/lib/brand";
 import { DISCLAIMER_ES } from "@/lib/disclaimer";
 import { hasActiveFilters, parseFilters } from "@/lib/vehicle-filters";
 import type { BodyType } from "@/lib/schemas/vehicle";
 import { getSiteConfig, getVehicleSearchIndex, getVehicles } from "@/services/dataService";
 
-export const metadata: Metadata = {
-  title: "Inventario",
-  description: "Carros listos para rodar en Broward. Título limpio (Clean Title). Precio a financiar, no de contado.",
+type Props = {
+  params: Promise<{ locale: string }>;
+  searchParams: Promise<Record<string, string | string[] | undefined>>;
 };
 
-const BODY_CHIPS: Array<{ id: BodyType | ""; label: string }> = [
-  { id: "", label: "Todos" },
-  { id: "suv", label: "SUV" },
-  { id: "sedan", label: "Sedán" },
-  { id: "pickup", label: "Pickup" },
-  { id: "van", label: "Minivan" },
-];
+export async function generateMetadata({ params }: Pick<Props, "params">): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "Meta" });
+  return {
+    title: t("inventoryTitle"),
+    description: t("inventoryDescription"),
+  };
+}
 
-export default async function InventoryPage({ searchParams }: PageProps<"/inventario">) {
+export default async function InventoryPage({ params, searchParams }: Props) {
+  const { locale } = await params;
+  setRequestLocale(locale);
+
+  const t = await getTranslations("Catalog");
+  const tHero = await getTranslations("Hero");
+  const tWa = await getTranslations("WhatsApp");
+
   const filters = parseFilters(await searchParams);
   const [site, vehicles, searchIndex] = await Promise.all([
     getSiteConfig(),
@@ -36,13 +45,19 @@ export default async function InventoryPage({ searchParams }: PageProps<"/invent
   const noMatches = hasFilters && vehicles.length === 0;
   const list = noMatches ? await getVehicles() : vehicles;
 
+  const BODY_CHIPS: Array<{ id: BodyType | ""; label: string }> = [
+    { id: "", label: t("all") },
+    { id: "suv", label: t("suv") },
+    { id: "sedan", label: t("sedan") },
+    { id: "pickup", label: t("pickup") },
+    { id: "van", label: t("minivan") },
+  ];
+
   return (
     <section className="bg-surface pb-24 pt-32 sm:pt-36">
       <div className="mx-auto max-w-7xl px-5 lg:px-8">
-        <h1 className="text-3xl font-extrabold tracking-tight sm:text-4xl">Inventario</h1>
-        <p className="mt-3 max-w-2xl text-navy-600">
-          Precio a financiar. Título limpio. Elegí el tipo de carro que necesitás.
-        </p>
+        <h1 className="text-3xl font-extrabold tracking-tight sm:text-4xl">{t("eyebrow")}</h1>
+        <p className="mt-3 max-w-2xl text-navy-600">{t("inventoryLead")}</p>
 
         <VehicleSearchBar
           key={JSON.stringify(filters)}
@@ -74,14 +89,14 @@ export default async function InventoryPage({ searchParams }: PageProps<"/invent
         <div className="mt-4 flex flex-wrap items-center gap-2 text-sm">
           <span className="font-semibold text-navy-600">
             {list.length === 0
-              ? "No hay carros publicados ahora"
+              ? t("nonePublished")
               : noMatches
-                ? "Sin coincidencias · te mostramos el stock completo"
-                : `${list.length} carros`}
+                ? t("noExact")
+                : t("count", { count: list.length })}
           </span>
           {hasFilters && (
             <Link href="/inventario" className="font-bold text-accent-600 hover:underline">
-              Limpiar filtros
+              {t("clearFilters")}
             </Link>
           )}
         </div>
@@ -89,17 +104,20 @@ export default async function InventoryPage({ searchParams }: PageProps<"/invent
         <div className="mt-10">
           {list.length === 0 ? (
             <div className="rounded-3xl bg-white px-6 py-14 text-center shadow-card">
-              <p className="text-lg font-extrabold tracking-tight">Por ahora no hay unidades en la web</p>
-              <p className="mt-2 text-navy-600">Escribime a Sebastián y te contamos qué está entrando.</p>
+              <p className="text-lg font-extrabold tracking-tight">{t("emptyTitle")}</p>
+              <p className="mt-2 text-navy-600">{t("emptyLead")}</p>
               <GlowButton
-                href={kikoWhatsApp(site.business)}
+                href={kikoWhatsApp(
+                  site.business,
+                  tWa("default", { name: site.business.contactName, business: site.business.name }),
+                )}
                 target="_blank"
                 rel="noopener noreferrer"
                 variant="accent"
                 size="lg"
                 className="mt-6"
               >
-                Escribime por WhatsApp
+                {tHero("ctaWhatsApp")}
               </GlowButton>
             </div>
           ) : (
@@ -111,7 +129,7 @@ export default async function InventoryPage({ searchParams }: PageProps<"/invent
 
         <div className="mt-10 flex justify-center">
           <GlowButton href="/#financiamiento" variant="dark" size="lg">
-            Ver inicial y cuota
+            {t("seeDownPayment")}
           </GlowButton>
         </div>
       </div>

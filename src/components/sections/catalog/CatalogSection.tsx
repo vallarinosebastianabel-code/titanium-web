@@ -1,3 +1,5 @@
+import { getTranslations } from "next-intl/server";
+
 import { GlowButton } from "@/components/ui/GlowButton";
 import { ArrowRightIcon } from "@/components/ui/icons";
 import { Reveal } from "@/components/ui/Reveal";
@@ -16,16 +18,14 @@ interface CatalogSectionProps {
   whatsapp: string;
 }
 
-export function CatalogSection({ vehicles, searchIndex, currency, loan, whatsapp }: CatalogSectionProps) {
+export async function CatalogSection({ vehicles, searchIndex, currency, loan, whatsapp }: CatalogSectionProps) {
+  const t = await getTranslations("Catalog");
+
   return (
     <section id="inventario" className="bg-surface py-24 sm:py-32">
       <div className="mx-auto max-w-7xl px-5 lg:px-8">
         <Reveal>
-          <SectionHeading
-            eyebrow="Inventario"
-            title="Carros listos para rodar"
-            description="Precio a financiar. Título limpio. Broward."
-          />
+          <SectionHeading eyebrow={t("eyebrow")} title={t("title")} description={t("description")} />
         </Reveal>
 
         <Reveal className="mt-10" delay={1} animation="fade-in-bottom">
@@ -38,7 +38,7 @@ export function CatalogSection({ vehicles, searchIndex, currency, loan, whatsapp
 
         <div className="mt-14 flex justify-center">
           <GlowButton href="/inventario" size="lg">
-            Ver todo el inventario
+            {t("viewAll")}
             <ArrowRightIcon width={20} height={20} />
           </GlowButton>
         </div>

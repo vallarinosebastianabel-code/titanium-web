@@ -2,6 +2,7 @@
 
 import { zodResolver } from "@hookform/resolvers/zod";
 import Image from "next/image";
+import { useTranslations } from "next-intl";
 import { useMemo, useState, useSyncExternalStore, type CSSProperties } from "react";
 import { Controller, useForm, useWatch } from "react-hook-form";
 
@@ -49,18 +50,17 @@ export function LoanSimulator(props: LoanSimulatorProps) {
 }
 
 function ChooseVehicleFirst() {
+  const t = useTranslations("Financing");
+
   return (
     <div className="mx-auto flex max-w-2xl flex-col items-center rounded-3xl bg-white p-8 text-center shadow-card sm:p-12">
       <span className="grid size-16 place-items-center rounded-2xl bg-accent-500/15 text-accent-600">
         <CarIcon width={32} height={32} />
       </span>
-      <h3 className="mt-6 text-2xl font-extrabold tracking-tight">Primero elegí tu auto</h3>
-      <p className="mt-3 max-w-md leading-relaxed text-navy-500">
-        La inicial y la cuota se calculan sobre el precio a financiar de un carro de nuestro inventario. Elegí uno y
-        volvé acá.
-      </p>
+      <h3 className="mt-6 text-2xl font-extrabold tracking-tight">{t("chooseTitle")}</h3>
+      <p className="mt-3 max-w-md leading-relaxed text-navy-500">{t("chooseLead")}</p>
       <GlowButton href="#inventario" variant="accent" size="lg" className="mt-8">
-        Inventario
+        {t("inventoryCta")}
         <ArrowRightIcon width={20} height={20} />
       </GlowButton>
     </div>
@@ -68,6 +68,8 @@ function ChooseVehicleFirst() {
 }
 
 function Calculator({ config, currency, whatsapp, vehicle }: LoanSimulatorProps & { vehicle: SelectedVehicle }) {
+  const t = useTranslations("Financing");
+  const tWa = useTranslations("WhatsApp");
   const money = (n: number) => formatCurrency(n, currency);
   const currencySymbol = useMemo(
     () => formatCurrency(0, currency, { maximumFractionDigits: 0 }).replace(/[\d\s.,]/g, ""),
@@ -144,15 +146,15 @@ function Calculator({ config, currency, whatsapp, vehicle }: LoanSimulatorProps 
           </div>
           <div className="min-w-0 flex-1">
             <p className="text-xs font-semibold uppercase tracking-wider text-navy-400">
-              Auto seleccionado · Stock {vehicle.stockNumber}
+              {t("selected", { stock: vehicle.stockNumber })}
             </p>
             <p className="mt-0.5 truncate text-lg font-extrabold tracking-tight">{vehicle.title}</p>
             <p className="mt-0.5 text-sm text-navy-500">
-              Precio a financiar:{" "}
+              {t("priceToFinance")}{" "}
               <strong className="text-base font-extrabold tabular-nums text-navy-900">{money(vehicle.price)}</strong>
             </p>
             <a href="#inventario" className="mt-1 inline-block text-sm font-bold text-accent-600 hover:underline">
-              Cambiar auto →
+              {t("changeCar")}
             </a>
           </div>
         </div>
@@ -162,7 +164,7 @@ function Calculator({ config, currency, whatsapp, vehicle }: LoanSimulatorProps 
           name="downPayment"
           render={({ field }) => (
             <MoneyRangeField
-              label="Inicial"
+              label={t("downPayment")}
               value={field.value}
               symbol={currencySymbol}
               min={downBounds.min}
@@ -184,11 +186,13 @@ function Calculator({ config, currency, whatsapp, vehicle }: LoanSimulatorProps 
             <div>
               <div className="flex items-end justify-between gap-4">
                 <label htmlFor="loan-term" className="text-sm font-bold text-navy-900">
-                  Plazo
+                  {t("term")}
                 </label>
                 <output htmlFor="loan-term" className="text-lg font-extrabold tabular-nums">
-                  {field.value} meses
-                  <span className="ml-1 text-sm font-semibold text-navy-400">({field.value / 12} años)</span>
+                  {t("months", { count: field.value })}
+                  <span className="ml-1 text-sm font-semibold text-navy-400">
+                    {t("years", { count: field.value / 12 })}
+                  </span>
                 </output>
               </div>
               <input
@@ -222,7 +226,7 @@ function Calculator({ config, currency, whatsapp, vehicle }: LoanSimulatorProps 
         className="space-y-4 rounded-3xl bg-navy-900 p-6 text-white shadow-float sm:p-9 lg:sticky lg:top-28 lg:col-span-5"
       >
         <div aria-live="polite" aria-atomic="true">
-          <p className="text-sm font-semibold uppercase tracking-wider text-white/60">Tu cuota mensual estimada</p>
+          <p className="text-sm font-semibold uppercase tracking-wider text-white/60">{t("monthlyEstimate")}</p>
 
           {result ? (
             <>
@@ -230,15 +234,15 @@ function Calculator({ config, currency, whatsapp, vehicle }: LoanSimulatorProps 
                 <span className="text-5xl font-extrabold tabular-nums tracking-tight sm:text-6xl">
                   {money(result.monthly)}
                 </span>
-                <span className="text-lg font-semibold text-white/60">/mes</span>
+                <span className="text-lg font-semibold text-white/60">{t("perMonth")}</span>
               </p>
-              <p className="mt-3 text-sm text-white/70">Estimación. Sujeto a aprobación. No es precio de contado.</p>
+              <p className="mt-3 text-sm text-white/70">{t("estimateNote")}</p>
 
               <dl className="mt-6 grid grid-cols-2 gap-x-6 gap-y-4 border-t border-white/10 pt-6 text-sm">
-                <Stat label="Inicial" value={money(values.downPayment)} />
-                <Stat label="Monto a financiar" value={money(result.principal)} />
-                <Stat label="Plazo" value={`${values.term} meses`} />
-                <Stat label="Precio a financiar" value={money(vehicle.price)} />
+                <Stat label={t("downPayment")} value={money(values.downPayment)} />
+                <Stat label={t("amountFinanced")} value={money(result.principal)} />
+                <Stat label={t("term")} value={t("months", { count: values.term })} />
+                <Stat label={t("priceLabel")} value={money(vehicle.price)} />
               </dl>
             </>
           ) : (
@@ -264,14 +268,19 @@ function Calculator({ config, currency, whatsapp, vehicle }: LoanSimulatorProps 
         ) : (
           <>
             <GlowButton
-              href={vehicleWhatsApp(whatsapp, vehicle.title, vehicle.stockNumber)}
+              href={vehicleWhatsApp(
+                whatsapp,
+                vehicle.title,
+                vehicle.stockNumber,
+                tWa("vehicle", { title: vehicle.title, stock: vehicle.stockNumber }),
+              )}
               target="_blank"
               rel="noopener noreferrer"
               variant="accent"
               size="lg"
               className="w-full"
             >
-              Escribime a Sebastián por WhatsApp
+              {t("whatsappCta")}
               <ArrowRightIcon width={20} height={20} />
             </GlowButton>
             <button
@@ -280,11 +289,11 @@ function Calculator({ config, currency, whatsapp, vehicle }: LoanSimulatorProps 
               onClick={() => setShowLeadForm(true)}
               disabled={!result}
             >
-              O dejá tus datos
+              {t("leaveData")}
             </button>
             <p className="flex items-center justify-center gap-2 text-center text-xs font-medium text-white/70">
               <ShieldIcon width={16} height={16} />
-              Financiamiento propio · Sujeto a aprobación
+              {t("trust")}
             </p>
           </>
         )}

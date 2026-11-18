@@ -1,6 +1,5 @@
 "use client";
 
-import Link from "next/link";
 import {
   useRef,
   type AnchorHTMLAttributes,
@@ -9,6 +8,7 @@ import {
   type ReactNode,
 } from "react";
 
+import { Link } from "@/i18n/navigation";
 import { cn } from "@/lib/format";
 
 type Variant = "dark" | "accent" | "light";
@@ -72,11 +72,18 @@ export function GlowButton(props: GlowButtonProps) {
 
   if ("href" in rest && rest.href !== undefined) {
     const { href, ...anchorRest } = rest;
-    const Tag = href.startsWith("/") || href.startsWith("#") ? Link : "a";
+    const isAppPath = href.startsWith("/") && !href.startsWith("//");
+    if (isAppPath) {
+      return (
+        <Link href={href} className={classes} onPointerMove={move} onPointerLeave={leave} {...anchorRest}>
+          {inner}
+        </Link>
+      );
+    }
     return (
-      <Tag href={href} className={classes} onPointerMove={move} onPointerLeave={leave} {...anchorRest}>
+      <a href={href} className={classes} onPointerMove={move} onPointerLeave={leave} {...anchorRest}>
         {inner}
-      </Tag>
+      </a>
     );
   }
 

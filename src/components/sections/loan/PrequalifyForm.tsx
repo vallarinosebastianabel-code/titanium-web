@@ -1,6 +1,7 @@
 "use client";
 
 import { zodResolver } from "@hookform/resolvers/zod";
+import { useTranslations } from "next-intl";
 import { useState } from "react";
 import { useForm } from "react-hook-form";
 
@@ -19,6 +20,8 @@ interface PrequalifyFormProps {
 type Status = "idle" | "sent" | "error";
 
 export function PrequalifyForm({ simulation, whatsapp, onCancel }: PrequalifyFormProps) {
+  const t = useTranslations("Lead");
+  const tWa = useTranslations("WhatsApp");
   const [status, setStatus] = useState<Status>("idle");
 
   const {
@@ -60,17 +63,15 @@ export function PrequalifyForm({ simulation, whatsapp, onCancel }: PrequalifyFor
         <span className="mx-auto mb-3 grid size-12 place-items-center rounded-full bg-emerald-100 text-emerald-600">
           <CheckIcon width={26} height={26} strokeWidth={3} />
         </span>
-        <h3 className="text-lg font-extrabold">¡Solicitud recibida!</h3>
-        <p className="mt-1 text-sm text-navy-600">
-          Sebastián te escribe para confirmar inicial y papeles.
-        </p>
+        <h3 className="text-lg font-extrabold">{t("successTitle")}</h3>
+        <p className="mt-1 text-sm text-navy-600">{t("successLead")}</p>
         <a
-          href={whatsappLink(whatsapp, "Hola Sebastián, acabo de dejar mis datos en la web.")}
+          href={whatsappLink(whatsapp, tWa("lead"))}
           target="_blank"
           rel="noopener noreferrer"
           className="mt-4 inline-flex items-center gap-2 text-sm font-bold text-accent-600 hover:underline"
         >
-          <WhatsAppIcon width={18} height={18} /> Escribime a Sebastián por WhatsApp
+          <WhatsAppIcon width={18} height={18} /> {t("whatsappCta")}
         </a>
       </div>
     );
@@ -83,13 +84,13 @@ export function PrequalifyForm({ simulation, whatsapp, onCancel }: PrequalifyFor
       className="scale-in-ver-top rounded-2xl bg-white p-5 text-navy-900 sm:p-6"
       aria-label="Dejar datos de contacto"
     >
-      <h3 className="text-lg font-extrabold">Último paso</h3>
-      <p className="mb-4 text-sm text-navy-600">Te escribimos por WhatsApp. Sujeto a aprobación.</p>
+      <h3 className="text-lg font-extrabold">{t("lastStep")}</h3>
+      <p className="mb-4 text-sm text-navy-600">{t("formLead")}</p>
 
       <div className="space-y-3">
-        <TextField label="Nombre completo" autoComplete="name" error={errors.name?.message} {...register("name")} />
+        <TextField label={t("name")} autoComplete="name" error={errors.name?.message} {...register("name")} />
         <TextField
-          label="Teléfono"
+          label={t("phone")}
           type="tel"
           autoComplete="tel"
           inputMode="tel"
@@ -97,7 +98,7 @@ export function PrequalifyForm({ simulation, whatsapp, onCancel }: PrequalifyFor
           {...register("phone")}
         />
         <TextField
-          label="Correo electrónico"
+          label={t("email")}
           type="email"
           autoComplete="email"
           error={errors.email?.message}
@@ -119,7 +120,7 @@ export function PrequalifyForm({ simulation, whatsapp, onCancel }: PrequalifyFor
             aria-invalid={errors.consent ? true : undefined}
             {...register("consent")}
           />
-          <span>Acepto ser contactado por teléfono, WhatsApp o correo sobre mi solicitud.</span>
+          <span>{t("consent")}</span>
         </label>
         {errors.consent && (
           <p role="alert" className="text-sm font-medium text-[#d4313b]">
@@ -130,16 +131,16 @@ export function PrequalifyForm({ simulation, whatsapp, onCancel }: PrequalifyFor
 
       {status === "error" && (
         <p role="alert" className="mt-3 rounded-lg bg-red-50 p-3 text-sm font-medium text-red-700">
-          No pudimos enviar tu solicitud. Inténtalo de nuevo o escríbenos por WhatsApp.
+          {t("error")}
         </p>
       )}
 
       <div className="mt-5 flex flex-col gap-3 sm:flex-row sm:items-center">
         <GlowButton type="submit" variant="dark" size="lg" className="flex-1" disabled={isSubmitting}>
-          {isSubmitting ? "Enviando…" : "Enviar solicitud"}
+          {isSubmitting ? t("sending") : t("submit")}
         </GlowButton>
         <button type="button" onClick={onCancel} className="text-sm font-semibold text-navy-500 hover:text-navy-900">
-          Volver
+          {t("back")}
         </button>
       </div>
     </form>

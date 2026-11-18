@@ -1,0 +1,225 @@
+{
+  "Meta": {
+    "titleDefault": "Titanium South Florida | Your car, even without an SSN",
+    "titleTemplate": "%s | Titanium South Florida",
+    "description": "In-house financing with no SSN (Social Security) in Hollywood, FL. Passport, license, clean title, and a clear down payment. Message Sebastián on WhatsApp.",
+    "inventoryTitle": "Inventory",
+    "inventoryDescription": "Cars ready to drive in Broward. Clean title. Price to finance — not cash price."
+  },
+  "Nav": {
+    "howItWorks": "How it works",
+    "inventory": "Inventory",
+    "financing": "Financing",
+    "about": "About us",
+    "faq": "FAQ",
+    "contact": "Contact",
+    "primary": "Primary",
+    "secondary": "Secondary",
+    "homeAria": "{name} – Home",
+    "language": "Language",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu",
+    "menu": "Menu"
+  },
+  "Hero": {
+    "headline": "Your next car, no SSN required.",
+    "highlight1": "Passport and license only",
+    "highlight2": "Clean title",
+    "highlight3": "Down payment from $2,000* · car by car",
+    "ctaWhatsApp": "Message us on WhatsApp",
+    "ctaInventory": "View inventory",
+    "carouselAria": "Happy customers receiving their keys"
+  },
+  "HowItWorks": {
+    "eyebrow": "How it works",
+    "title": "Three steps. No fine print hiding.",
+    "step1Title": "Pick your car",
+    "step1Text": "Sedan, SUV, pickup, or minivan. All with clean title.",
+    "step2Title": "Bring passport and license",
+    "step2Text": "Few papers. No runaround.",
+    "step3Title": "Drive away",
+    "step3Text": "Same day, subject to approval.",
+    "cta": "Message us"
+  },
+  "Catalog": {
+    "eyebrow": "Inventory",
+    "title": "Cars ready to drive",
+    "description": "Price to finance. Clean title. Broward.",
+    "viewAll": "See full inventory",
+    "searchTitle": "What car are you looking for?",
+    "searchLead": "Search by make or model, type, or year.",
+    "makeModel": "Make or model",
+    "bodyType": "Body type",
+    "year": "Year",
+    "placeholderQuery": "What do you have in mind?",
+    "allTypes": "All types",
+    "anyYear": "Any year",
+    "searchCta": "Search vehicles",
+    "priceLabel": "Price to finance",
+    "details": "View details",
+    "detailsAria": "View details: {title}",
+    "automatic": "Automatic",
+    "manual": "Manual",
+    "all": "All",
+    "suv": "SUV",
+    "sedan": "Sedan",
+    "pickup": "Pickup",
+    "minivan": "Minivan",
+    "count": "{count} cars",
+    "noExact": "No exact matches · showing full stock",
+    "nonePublished": "No cars listed right now",
+    "emptyTitle": "No units on the site for now",
+    "emptyLead": "Message Sebastián and we’ll tell you what’s coming in.",
+    "clearFilters": "Clear filters",
+    "inventoryLead": "Price to finance. Clean title. Pick the type of car you need.",
+    "seeDownPayment": "See down payment & payment"
+  },
+  "Vehicle": {
+    "stock": "Stock",
+    "miles": "Miles",
+    "year": "Year",
+    "type": "Type",
+    "transmission": "Transmission",
+    "automatic": "Automatic",
+    "manual": "Manual",
+    "fuel": "Fuel",
+    "gasoline": "Gasoline",
+    "diesel": "Diesel",
+    "hybrid": "Hybrid",
+    "electric": "Electric",
+    "exterior": "Exterior color",
+    "interior": "Interior color",
+    "vin": "VIN",
+    "zoom": "Enlarge",
+    "close": "Close",
+    "prev": "Previous photo",
+    "next": "Next photo",
+    "gallery": "Vehicle photos",
+    "closeZoom": "Close enlarged image",
+    "seeDown": "See down payment for this car",
+    "whatsapp": "Message Sebastián about this car"
+  },
+  "Financing": {
+    "eyebrow": "Financing",
+    "title": "See your down payment and monthly payment, with clear rules",
+    "chooseTitle": "Pick a car first",
+    "chooseLead": "Down payment and monthly payment are based on the financed price of a car from our inventory. Choose one and come back here.",
+    "inventoryCta": "Inventory",
+    "selected": "Selected car · Stock {stock}",
+    "priceToFinance": "Price to finance:",
+    "changeCar": "Change car →",
+    "downPayment": "Down payment",
+    "term": "Term",
+    "months": "{count} months",
+    "years": "({count} years)",
+    "monthlyEstimate": "Your estimated monthly payment",
+    "perMonth": "/mo",
+    "estimateNote": "Estimate. Subject to approval. Not cash price.",
+    "amountFinanced": "Amount financed",
+    "priceLabel": "Price to finance",
+    "whatsappCta": "Message Sebastián on WhatsApp",
+    "leaveData": "Or leave your info",
+    "trust": "In-house financing · Subject to approval"
+  },
+  "Lead": {
+    "successTitle": "Request received!",
+    "successLead": "Sebastián will message you to confirm down payment and papers.",
+    "whatsappCta": "Message Sebastián on WhatsApp",
+    "lastStep": "Last step",
+    "formLead": "We’ll reach you on WhatsApp. Subject to approval.",
+    "name": "Full name",
+    "phone": "Phone",
+    "email": "Email",
+    "consent": "I agree to be contacted by phone, WhatsApp, or email about my request.",
+    "error": "We couldn’t send your request. Try again or message us on WhatsApp.",
+    "sending": "Sending…",
+    "submit": "Submit request",
+    "back": "Back"
+  },
+  "About": {
+    "eyebrow": "About us",
+    "title": "Titanium means seriousness.",
+    "description": "{place}. In-house financing with no SSN for people who need to get moving.",
+    "dealerLabel": "Dealer",
+    "dealerTitle": "Titanium South Florida",
+    "dealerBody": "The business behind it: cars ready to drive, clean title, and clear rules. Here {voiceName} helps you get your car.",
+    "contactLabel": "WhatsApp",
+    "contactBody": "Replies on WhatsApp and by phone: {phone}. Down payment, papers, and availability — car by car."
+  },
+  "Faq": {
+    "eyebrow": "FAQ",
+    "title": "What people ask most",
+    "description": "No SSN, down payment, clean title, and driving away. In plain words.",
+    "financing": "Financing",
+    "requirements": "Requirements",
+    "inventory": "Inventory",
+    "more": "Don’t see your question?",
+    "whatsapp": "Message Sebastián on WhatsApp",
+    "items": {
+      "f01": {
+        "q": "Do I need an SSN (Social Security)?",
+        "a": "No. We use in-house financing — you don’t depend on a bank. Bring passport and license. Approval is subject to review."
+      },
+      "f02": {
+        "q": "What documents do I need?",
+        "a": "Passport and license. If you have more papers, bring them; they’re not required to start. We’ll tell you on WhatsApp if anything else is needed for your case."
+      },
+      "f03": {
+        "q": "Does a foreign license work?",
+        "a": "Bring it with your passport and we’ll review it. Sebastián confirms the final answer, car by car."
+      },
+      "f04": {
+        "q": "What’s the real down payment?",
+        "a": "The price you see is the amount to finance after a 35%–45% down payment. On some cars the down payment can start at $2,000*. We confirm it on WhatsApp, car by car. Subject to approval. Not cash price."
+      },
+      "f05": {
+        "q": "Is the title clean?",
+        "a": "We list cars with a clean title: no salvage and no surprises. If a car doesn’t have it, we don’t sell it as if it did."
+      },
+      "f06": {
+        "q": "Can I drive away the same day?",
+        "a": "It’s possible, subject to approval and bringing passport, license, and down payment. It’s not automatic — we confirm once we see your case."
+      },
+      "f07": {
+        "q": "What if I miss a payment?",
+        "a": "Talk to us first. We prefer to work with you than surprise you. Rules are explained at signing, in writing."
+      },
+      "f08": {
+        "q": "Can I get insurance in my name?",
+        "a": "The car goes in your name. Insurance can too; if you don’t have it yet, we’ll tell you what you need before pickup. Confirm with Sebastián when you choose the car."
+      },
+      "f09": {
+        "q": "Is this the same as Apolo?",
+        "a": "No. Apolo is in Miami-Dade. Titanium South Florida / Kiko Cars is in Broward: Hollywood and nearby. Same family, different location."
+      }
+    }
+  },
+  "Contact": {
+    "eyebrow": "Contact",
+    "title": "Talk to {name}. He replies in minutes.",
+    "lead": "WhatsApp first. Call after. We help you pick the car and the down payment.",
+    "phoneTitle": "WhatsApp and phone",
+    "whatsapp": "WhatsApp",
+    "call": "Call",
+    "whereTitle": "Where we are",
+    "directions": "Get directions →",
+    "hoursTitle": "Hours"
+  },
+  "Footer": {
+    "tagline": "Your car, even without an SSN.",
+    "sub": "where {voiceName} helps you get your car",
+    "nav": "Navigation",
+    "visit": "Visit us",
+    "rights": "© {year} {name}. All rights reserved."
+  },
+  "Fab": {
+    "aria": "Message us on WhatsApp",
+    "title": "WhatsApp Titanium"
+  },
+  "WhatsApp": {
+    "default": "Hi {name}, I saw the {business} website and I want a car.",
+    "vehicle": "Hi Sebastián, I’m interested in the {title} (Stock {stock}). Can you confirm the down payment and if it’s available?",
+    "faq": "Hi Sebastián, I have a question about a car.",
+    "lead": "Hi Sebastián, I just left my info on the website."
+  }
+}

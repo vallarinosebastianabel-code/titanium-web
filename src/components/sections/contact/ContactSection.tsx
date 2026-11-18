@@ -1,3 +1,4 @@
+import { getTranslations } from "next-intl/server";
 import type { ReactNode } from "react";
 
 import { ClockIcon, MapPinIcon, WhatsAppIcon } from "@/components/ui/icons";
@@ -19,7 +20,8 @@ function InfoRow({ icon, title, children }: { icon: ReactNode; title: string; ch
   );
 }
 
-export function ContactSection({ business }: { business: SiteConfig["business"] }) {
+export async function ContactSection({ business }: { business: SiteConfig["business"] }) {
+  const t = await getTranslations("Contact");
   const { address } = business;
   const lines = addressLines(address);
   const mapUrl =
@@ -32,27 +34,27 @@ export function ContactSection({ business }: { business: SiteConfig["business"] 
       <div className="mx-auto max-w-7xl px-5 lg:px-8">
         <Reveal>
           <SectionHeading
-            eyebrow="Contacto"
-            title={`Hablá con ${business.contactName}. Te responde en minutos.`}
-            description="WhatsApp primero. Llamada después. Te ayudamos a elegir el carro y la inicial."
+            eyebrow={t("eyebrow")}
+            title={t("title", { name: business.contactName })}
+            description={t("lead")}
             className="[&_h2]:text-white [&_p]:text-white/70 [&_p:first-child]:text-accent-400"
           />
         </Reveal>
 
         <Reveal className="mt-16">
           <ul className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-            <InfoRow icon={<WhatsAppIcon />} title="WhatsApp y teléfono">
+            <InfoRow icon={<WhatsAppIcon />} title={t("phoneTitle")}>
               <p>{business.phone}</p>
               <p className="mt-1 flex flex-wrap gap-x-4 gap-y-1 text-sm font-semibold">
                 <a href={wa} target="_blank" rel="noopener noreferrer" className="text-accent-400 hover:underline">
-                  WhatsApp
+                  {t("whatsapp")}
                 </a>
                 <a href={tel} className="text-accent-400 hover:underline">
-                  Llamar
+                  {t("call")}
                 </a>
               </p>
             </InfoRow>
-            <InfoRow icon={<MapPinIcon />} title="Dónde estamos">
+            <InfoRow icon={<MapPinIcon />} title={t("whereTitle")}>
               <address className="not-italic">
                 {lines.map((line) => (
                   <span key={line} className="block">
@@ -66,10 +68,10 @@ export function ContactSection({ business }: { business: SiteConfig["business"] 
                 rel="noopener noreferrer"
                 className="mt-1 inline-block text-sm text-accent-400 hover:underline"
               >
-                Cómo llegar →
+                {t("directions")}
               </a>
             </InfoRow>
-            <InfoRow icon={<ClockIcon />} title="Horario">
+            <InfoRow icon={<ClockIcon />} title={t("hoursTitle")}>
               <dl className="mt-1 space-y-2 text-sm">
                 {business.hours.map((h) => (
                   <div key={h.days}>

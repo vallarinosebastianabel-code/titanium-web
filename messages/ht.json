@@ -1,0 +1,225 @@
+{
+  "Meta": {
+    "titleDefault": "Titanium South Florida | Machin ou, menm san SSN",
+    "titleTemplate": "%s | Titanium South Florida",
+    "description": "Finansman pwòp san SSN (Social) nan Hollywood, FL. Paspò, lisans, clean title ak yon depo klè. Ekri Sebastián sou WhatsApp.",
+    "inventoryTitle": "Envantè",
+    "inventoryDescription": "Machin pare pou w kondwi nan Broward. Clean title. Pri pou finansman, se pa pri kach."
+  },
+  "Nav": {
+    "howItWorks": "Kijan li mache",
+    "inventory": "Envantè",
+    "financing": "Finansman",
+    "about": "Ki moun nou ye",
+    "faq": "FAQ",
+    "contact": "Kontak",
+    "primary": "Prensipal",
+    "secondary": "Segondè",
+    "homeAria": "{name} – Akèy",
+    "language": "Lang",
+    "openMenu": "Ouvri meni",
+    "closeMenu": "Fèmen meni",
+    "menu": "Meni"
+  },
+  "Hero": {
+    "headline": "Pwochen machin ou, san SSN.",
+    "highlight1": "Paspò ak lisans sèlman",
+    "highlight2": "Clean title (tit pwòp)",
+    "highlight3": "Depo depi $2,000* · machin pa machin",
+    "ctaWhatsApp": "Ekri nou sou WhatsApp",
+    "ctaInventory": "Gade envantè",
+    "carouselAria": "Kliyan kè kontan k ap resevwa kle yo"
+  },
+  "HowItWorks": {
+    "eyebrow": "Kijan li mache",
+    "title": "Twa etap. Pa gen ti lèt kache.",
+    "step1Title": "Chwazi machin ou",
+    "step1Text": "Sedan, SUV, pickup oswa minivan. Tout ak clean title.",
+    "step2Title": "Pote paspò ak lisans",
+    "step2Text": "Ti papye. Pa gen tèt chaje.",
+    "step3Title": "Soti w ap kondwi",
+    "step3Text": "Menm jou a, selon apwobasyon.",
+    "cta": "Ekri nou"
+  },
+  "Catalog": {
+    "eyebrow": "Envantè",
+    "title": "Machin pare pou kondwi",
+    "description": "Pri pou finansman. Clean title. Broward.",
+    "viewAll": "Gade tout envantè a",
+    "searchTitle": "Ki machin w ap chèche?",
+    "searchLead": "Chèche pa mak oswa modèl, tip oswa ane.",
+    "makeModel": "Mak oswa modèl",
+    "bodyType": "Tip machin",
+    "year": "Ane",
+    "placeholderQuery": "Kisa ki nan tèt ou?",
+    "allTypes": "Tout tip",
+    "anyYear": "Nenpòt ane",
+    "searchCta": "Chèche machin",
+    "priceLabel": "Pri pou finansman",
+    "details": "Gade detay",
+    "detailsAria": "Gade detay: {title}",
+    "automatic": "Otomatik",
+    "manual": "Manyèl",
+    "all": "Tout",
+    "suv": "SUV",
+    "sedan": "Sedan",
+    "pickup": "Pickup",
+    "minivan": "Minivan",
+    "count": "{count} machin",
+    "noExact": "Pa gen egzak · n ap montre tout stock la",
+    "nonePublished": "Pa gen machin pibliye kounye a",
+    "emptyTitle": "Pou kounye a pa gen inite sou sit la",
+    "emptyLead": "Ekri Sebastián epi n ap di w sa k ap antre.",
+    "clearFilters": "Efase filtè",
+    "inventoryLead": "Pri pou finansman. Clean title. Chwazi tip machin ou bezwen an.",
+    "seeDownPayment": "Gade depo ak peman"
+  },
+  "Vehicle": {
+    "stock": "Stock",
+    "miles": "Mil",
+    "year": "Ane",
+    "type": "Tip",
+    "transmission": "Transmisyon",
+    "automatic": "Otomatik",
+    "manual": "Manyèl",
+    "fuel": "Karbiran",
+    "gasoline": "Gazolin",
+    "diesel": "Dizèl",
+    "hybrid": "Ibrid",
+    "electric": "Elektwik",
+    "exterior": "Koulè deyò",
+    "interior": "Koulè anndan",
+    "vin": "VIN",
+    "zoom": "Agrandi",
+    "close": "Fèmen",
+    "prev": "Foto anvan",
+    "next": "Pwochen foto",
+    "gallery": "Foto machin nan",
+    "closeZoom": "Fèmen imaj agrandi",
+    "seeDown": "Gade depo pou machin sa a",
+    "whatsapp": "Ekri Sebastián pou machin sa a"
+  },
+  "Financing": {
+    "eyebrow": "Finansman",
+    "title": "Gade depo ak peman mansyèl ou, ak règ klè",
+    "chooseTitle": "Chwazi yon machin anvan",
+    "chooseLead": "Depo ak peman kalkile sou pri finansman yon machin nan envantè nou. Chwazi youn epi tounen isit la.",
+    "inventoryCta": "Envantè",
+    "selected": "Machin chwazi · Stock {stock}",
+    "priceToFinance": "Pri pou finansman:",
+    "changeCar": "Chanje machin →",
+    "downPayment": "Depo",
+    "term": "Delè",
+    "months": "{count} mwa",
+    "years": "({count} ane)",
+    "monthlyEstimate": "Peman mansyèl estime ou",
+    "perMonth": "/mwa",
+    "estimateNote": "Estimasyon. Selon apwobasyon. Se pa pri kach.",
+    "amountFinanced": "Montan pou finansman",
+    "priceLabel": "Pri pou finansman",
+    "whatsappCta": "Ekri Sebastián sou WhatsApp",
+    "leaveData": "Oswa kite enfòmasyon ou",
+    "trust": "Finansman pwòp · Selon apwobasyon"
+  },
+  "Lead": {
+    "successTitle": "Demann resevwa!",
+    "successLead": "Sebastián ap ekri w pou konfime depo ak papye.",
+    "whatsappCta": "Ekri Sebastián sou WhatsApp",
+    "lastStep": "Dènye etap",
+    "formLead": "N ap kontakte w sou WhatsApp. Selon apwobasyon.",
+    "name": "Non konplè",
+    "phone": "Telefòn",
+    "email": "Imèl",
+    "consent": "Mwen dakò pou yo kontakte m pa telefòn, WhatsApp oswa imèl sou demann mwen an.",
+    "error": "Nou pa t ka voye demann lan. Eseye ankò oswa ekri nou sou WhatsApp.",
+    "sending": "Ap voye…",
+    "submit": "Voye demann",
+    "back": "Tounen"
+  },
+  "About": {
+    "eyebrow": "Ki moun nou ye",
+    "title": "Titanium se serye.",
+    "description": "{place}. Finansman pwòp san SSN pou moun ki bezwen deplase.",
+    "dealerLabel": "Dealer",
+    "dealerTitle": "Titanium South Florida",
+    "dealerBody": "Biznis ki sipòte: machin pare pou kondwi, clean title, ak règ klè. Isit {voiceName} ede w jwenn machin ou.",
+    "contactLabel": "WhatsApp",
+    "contactBody": "Li reponn sou WhatsApp ak nan telefòn: {phone}. Depo, papye ak disponiblite, machin pa machin."
+  },
+  "Faq": {
+    "eyebrow": "Kesyon yo poze souvan",
+    "title": "Sa moun mande plis",
+    "description": "San SSN, depo, clean title, ak soti w ap kondwi. An ti mo.",
+    "financing": "Finansman",
+    "requirements": "Kondisyon",
+    "inventory": "Envantè",
+    "more": "Ou pa jwenn repons ou?",
+    "whatsapp": "Ekri Sebastián sou WhatsApp",
+    "items": {
+      "f01": {
+        "q": "Èske m bezwen SSN (Social)?",
+        "a": "Non. Nou travay ak finansman pwòp: ou pa depann de bank. Pote paspò ak lisans. Apwobasyon an selon revizyon."
+      },
+      "f02": {
+        "q": "Ki dokiman m bezwen?",
+        "a": "Paspò ak lisans. Si w gen plis papye, pote yo; yo pa obligatwa pou kòmanse. N ap di w sou WhatsApp si gen lòt bagay pou ka w."
+      },
+      "f03": {
+        "q": "Èske lisans etranje mache?",
+        "a": "Pote l ak paspò a epi n ap revize. Sebastián konfime repons final la, machin pa machin."
+      },
+      "f04": {
+        "q": "Ki vrè depo a?",
+        "a": "Pri w wè a se montan pou finansman, apre yon depo 35%–45%. Nan kèk machin depo a ka kòmanse a $2,000*. Nou konfime sou WhatsApp, machin pa machin. Selon apwobasyon. Se pa pri kach."
+      },
+      "f05": {
+        "q": "Èske tit la pwòp (clean title)?",
+        "a": "Nou pibliye machin ak clean title: san salvage epi san sipriz. Si yon machin pa genyen l, nou pa vann li kòmsi li genyen."
+      },
+      "f06": {
+        "q": "Èske m ka soti m ap kondwi menm jou a?",
+        "a": "Li posib, selon apwobasyon epi pote paspò, lisans ak depo. Se pa otomatik: n ap konfime lè n wè ka w."
+      },
+      "f07": {
+        "q": "Kisa k ap pase si m anreta yon peman?",
+        "a": "Pale ak nou anvan. Nou pito akomode pase sipriz. Nou eksplike règ yo lè w siyen, alekri."
+      },
+      "f08": {
+        "q": "Èske m ka pran asirans nan non m?",
+        "a": "Machin nan soti nan non w. Asirans lan ka tou; si w poko genyen, n ap di w sa w bezwen anvan w pran li. Konfime ak Sebastián lè w chwazi machin nan."
+      },
+      "f09": {
+        "q": "Èske sa se menm bagay ak Apolo?",
+        "a": "Non. Apolo nan Miami-Dade. Titanium South Florida / Kiko Cars nan Broward: Hollywood ak alantou. Menm fanmi, lòt kay."
+      }
+    }
+  },
+  "Contact": {
+    "eyebrow": "Kontak",
+    "title": "Pale ak {name}. Li reponn an kèk minit.",
+    "lead": "WhatsApp anvan. Apèl apre. Nou ede w chwazi machin ak depo.",
+    "phoneTitle": "WhatsApp ak telefòn",
+    "whatsapp": "WhatsApp",
+    "call": "Rele",
+    "whereTitle": "Kote nou ye",
+    "directions": "Kijan pou rive →",
+    "hoursTitle": "Orè"
+  },
+  "Footer": {
+    "tagline": "Machin ou, menm san SSN.",
+    "sub": "kote {voiceName} ede w jwenn machin ou",
+    "nav": "Navigasyon",
+    "visit": "Vizite nou",
+    "rights": "© {year} {name}. Tout dwa rezève."
+  },
+  "Fab": {
+    "aria": "Ekri nou sou WhatsApp",
+    "title": "WhatsApp Titanium"
+  },
+  "WhatsApp": {
+    "default": "Bonjou {name}, mwen wè sit {business} epi mwen vle yon machin.",
+    "vehicle": "Bonjou Sebastián, mwen enterese nan {title} (Stock {stock}). Èske w ka konfime depo a epi si li disponib?",
+    "faq": "Bonjou Sebastián, mwen gen yon kesyon sou yon machin.",
+    "lead": "Bonjou Sebastián, mwen jis kite enfòmasyon mwen sou sit la."
+  }
+}

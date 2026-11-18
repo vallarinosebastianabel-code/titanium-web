@@ -1,9 +1,13 @@
 import { createServerClient } from "@supabase/ssr";
+import createMiddleware from "next-intl/middleware";
 import { NextResponse, type NextRequest } from "next/server";
 
+import { routing } from "@/i18n/routing";
 import { getSupabaseAnonKey, getSupabaseUrl, isSupabaseConfigured } from "@/lib/supabase/env";
 
-export async function proxy(request: NextRequest) {
+const handleI18n = createMiddleware(routing);
+
+async function handleAdmin(request: NextRequest) {
   let response = NextResponse.next({ request });
 
   if (!isSupabaseConfigured()) {
@@ -34,10 +38,9 @@ export async function proxy(request: NextRequest) {
   } = await supabase.auth.getUser();
 
   const path = request.nextUrl.pathname;
-  const isAdminRoute = path.startsWith("/admin");
   const isLogin = path === "/admin/login";
 
-  if (isAdminRoute && !isLogin && !user) {
+  if (!isLogin && !user) {
     const url = request.nextUrl.clone();
     url.pathname = "/admin/login";
     url.searchParams.set("next", path);
@@ -54,6 +57,17 @@ export async function proxy(request: NextRequest) {
   return response;
 }
 
+export async function proxy(request: NextRequest) {
+  const path = request.nextUrl.pathname;
+  if (path.startsWith("/admin")) return handleAdmin(request);
+  return handleI18n(request);
+}
+
 export const config = {
-  matcher: ["/admin/:path*"],
+  matcher: [
+    "/",
+    "/(es|en|pt|ht)/:path*",
+    "/((?!api|admin|_next|_vercel|.*\\..*).*)",
+    "/admin/:path*",
+  ],
 };

@@ -1,0 +1,225 @@
+{
+  "Meta": {
+    "titleDefault": "Titanium South Florida | Tu carro, aunque no tengas SSN",
+    "titleTemplate": "%s | Titanium South Florida",
+    "description": "Financiamiento propio sin SSN (Social) en Hollywood, FL. Pasaporte, licencia, título limpio e inicial clara. Escribime a Sebastián por WhatsApp.",
+    "inventoryTitle": "Inventario",
+    "inventoryDescription": "Carros listos para rodar en Broward. Título limpio (Clean Title). Precio a financiar, no de contado."
+  },
+  "Nav": {
+    "howItWorks": "Cómo funciona",
+    "inventory": "Inventario",
+    "financing": "Financiamiento",
+    "about": "Quiénes somos",
+    "faq": "FAQ",
+    "contact": "Contacto",
+    "primary": "Principal",
+    "secondary": "Secundaria",
+    "homeAria": "{name} – Inicio",
+    "language": "Idioma",
+    "openMenu": "Abrir menú",
+    "closeMenu": "Cerrar menú",
+    "menu": "Menú"
+  },
+  "Hero": {
+    "headline": "Tu próximo carro, sin SSN.",
+    "highlight1": "Solo pasaporte y licencia",
+    "highlight2": "Título limpio (Clean Title)",
+    "highlight3": "Inicial desde $2,000* · carro por carro",
+    "ctaWhatsApp": "Escribime por WhatsApp",
+    "ctaInventory": "Ver inventario",
+    "carouselAria": "Clientes felices recibiendo sus llaves"
+  },
+  "HowItWorks": {
+    "eyebrow": "Cómo funciona",
+    "title": "Tres pasos. Sin letra chica escondida.",
+    "step1Title": "Elegí tu carro",
+    "step1Text": "Sedán, SUV, pickup o minivan. Todos con título limpio.",
+    "step2Title": "Traé pasaporte y licencia",
+    "step2Text": "Pocos papeles. Sin vueltas.",
+    "step3Title": "Salí manejando",
+    "step3Text": "El mismo día, sujeto a aprobación.",
+    "cta": "Escribime"
+  },
+  "Catalog": {
+    "eyebrow": "Inventario",
+    "title": "Carros listos para rodar",
+    "description": "Precio a financiar. Título limpio. Broward.",
+    "viewAll": "Ver todo el inventario",
+    "searchTitle": "¿Qué carro buscás?",
+    "searchLead": "Buscá por marca o modelo, tipo o año.",
+    "makeModel": "Marca o modelo",
+    "bodyType": "Tipo de carro",
+    "year": "Año",
+    "placeholderQuery": "¿Qué tenés en mente?",
+    "allTypes": "Todos los tipos",
+    "anyYear": "Cualquier año",
+    "searchCta": "Buscar vehículos",
+    "priceLabel": "Precio a financiar",
+    "details": "Ver detalles",
+    "detailsAria": "Ver detalles: {title}",
+    "automatic": "Automático",
+    "manual": "Manual",
+    "all": "Todos",
+    "suv": "SUV",
+    "sedan": "Sedán",
+    "pickup": "Pickup",
+    "minivan": "Minivan",
+    "count": "{count} carros",
+    "noExact": "Sin coincidencias · te mostramos el stock completo",
+    "nonePublished": "No hay carros publicados ahora",
+    "emptyTitle": "Por ahora no hay unidades en la web",
+    "emptyLead": "Escribime a Sebastián y te contamos qué está entrando.",
+    "clearFilters": "Limpiar filtros",
+    "inventoryLead": "Precio a financiar. Título limpio. Elegí el tipo de carro que necesitás.",
+    "seeDownPayment": "Ver inicial y cuota"
+  },
+  "Vehicle": {
+    "stock": "Stock",
+    "miles": "Millas",
+    "year": "Año",
+    "type": "Tipo",
+    "transmission": "Transmisión",
+    "automatic": "Automática",
+    "manual": "Manual",
+    "fuel": "Combustible",
+    "gasoline": "Gasolina",
+    "diesel": "Diésel",
+    "hybrid": "Híbrido",
+    "electric": "Eléctrico",
+    "exterior": "Color exterior",
+    "interior": "Color interior",
+    "vin": "VIN",
+    "zoom": "Ampliar",
+    "close": "Cerrar",
+    "prev": "Foto anterior",
+    "next": "Foto siguiente",
+    "gallery": "Fotos del vehículo",
+    "closeZoom": "Cerrar imagen ampliada",
+    "seeDown": "Ver inicial de este carro",
+    "whatsapp": "Escribime a Sebastián por este carro"
+  },
+  "Financing": {
+    "eyebrow": "Financiamiento",
+    "title": "Mirá tu inicial y tu cuota, con reglas claras",
+    "chooseTitle": "Primero elegí tu auto",
+    "chooseLead": "La inicial y la cuota se calculan sobre el precio a financiar de un carro de nuestro inventario. Elegí uno y volvé acá.",
+    "inventoryCta": "Inventario",
+    "selected": "Auto seleccionado · Stock {stock}",
+    "priceToFinance": "Precio a financiar:",
+    "changeCar": "Cambiar auto →",
+    "downPayment": "Inicial",
+    "term": "Plazo",
+    "months": "{count} meses",
+    "years": "({count} años)",
+    "monthlyEstimate": "Tu cuota mensual estimada",
+    "perMonth": "/mes",
+    "estimateNote": "Estimación. Sujeto a aprobación. No es precio de contado.",
+    "amountFinanced": "Monto a financiar",
+    "priceLabel": "Precio a financiar",
+    "whatsappCta": "Escribime a Sebastián por WhatsApp",
+    "leaveData": "O dejá tus datos",
+    "trust": "Financiamiento propio · Sujeto a aprobación"
+  },
+  "Lead": {
+    "successTitle": "¡Solicitud recibida!",
+    "successLead": "Sebastián te escribe para confirmar inicial y papeles.",
+    "whatsappCta": "Escribime a Sebastián por WhatsApp",
+    "lastStep": "Último paso",
+    "formLead": "Te escribimos por WhatsApp. Sujeto a aprobación.",
+    "name": "Nombre completo",
+    "phone": "Teléfono",
+    "email": "Correo electrónico",
+    "consent": "Acepto ser contactado por teléfono, WhatsApp o correo sobre mi solicitud.",
+    "error": "No pudimos enviar tu solicitud. Probá de nuevo o escribinos por WhatsApp.",
+    "sending": "Enviando…",
+    "submit": "Enviar solicitud",
+    "back": "Volver"
+  },
+  "About": {
+    "eyebrow": "Quiénes somos",
+    "title": "Titanium es seriedad.",
+    "description": "{place}. Financiamiento propio sin SSN para quien necesita moverse.",
+    "dealerLabel": "Dealer",
+    "dealerTitle": "Titanium South Florida",
+    "dealerBody": "El negocio que respalda: carros listos para rodar, título limpio y reglas claras. Acá {voiceName} te consigue el carro.",
+    "contactLabel": "WhatsApp",
+    "contactBody": "Te responde por WhatsApp y por teléfono: {phone}. Inicial, papeles y disponibilidad, carro por carro."
+  },
+  "Faq": {
+    "eyebrow": "Preguntas frecuentes",
+    "title": "Lo que más nos preguntan",
+    "description": "Sin SSN, inicial, título limpio y cómo salir manejando. En pocas palabras.",
+    "financing": "Financiamiento",
+    "requirements": "Requisitos",
+    "inventory": "Inventario",
+    "more": "¿No encontrás tu respuesta?",
+    "whatsapp": "Escribime a Sebastián por WhatsApp",
+    "items": {
+      "f01": {
+        "q": "¿Necesito SSN (Social)?",
+        "a": "No. Trabajamos con financiamiento propio: no dependés del banco. Traé pasaporte y licencia. La aprobación está sujeta a revisión."
+      },
+      "f02": {
+        "q": "¿Qué documentos necesito?",
+        "a": "Pasaporte y licencia. Si tenés más papeles, traelos; no son el requisito para empezar. Te decimos por WhatsApp si hace falta algo más para tu caso."
+      },
+      "f03": {
+        "q": "¿Sirve licencia extranjera?",
+        "a": "Traela junto con el pasaporte y lo revisamos. La respuesta final te la confirma Sebastián, carro por carro."
+      },
+      "f04": {
+        "q": "¿Cuánto es la inicial de verdad?",
+        "a": "El precio que ves es el monto a financiar, después de una inicial del 35%–45%. En algunos carros la inicial puede empezar en $2,000*. Te la confirmamos por WhatsApp, carro por carro. Sujeto a aprobación. No es precio de contado."
+      },
+      "f05": {
+        "q": "¿El título está limpio?",
+        "a": "Publicamos carros con título limpio (Clean Title): sin salvage y sin esa sorpresa. Si un carro no lo tiene, no lo vendemos como si lo tuviera."
+      },
+      "f06": {
+        "q": "¿Salgo manejando el mismo día?",
+        "a": "Es posible, sujeto a aprobación y a que traigas pasaporte, licencia e inicial. No es automático: te lo confirmamos cuando vemos tu caso."
+      },
+      "f07": {
+        "q": "¿Qué pasa si me atraso un pago?",
+        "a": "Hablanos antes. Preferimos acomodar que sorprender. Las reglas te las explicamos al firmar, en español y por escrito."
+      },
+      "f08": {
+        "q": "¿Puedo sacar el seguro a mi nombre?",
+        "a": "El carro sale a tu nombre. El seguro también puede ir a tu nombre; si todavía no lo tenés, te decimos qué necesitás antes de retirarlo. Confirmalo con Sebastián al elegir el carro."
+      },
+      "f09": {
+        "q": "¿Esto es lo mismo que Apolo?",
+        "a": "No. Apolo está en Miami-Dade. Titanium South Florida / Kiko Cars está en Broward: Hollywood y alrededores. Misma familia, otra casa."
+      }
+    }
+  },
+  "Contact": {
+    "eyebrow": "Contacto",
+    "title": "Hablá con {name}. Te responde en minutos.",
+    "lead": "WhatsApp primero. Llamada después. Te ayudamos a elegir el carro y la inicial.",
+    "phoneTitle": "WhatsApp y teléfono",
+    "whatsapp": "WhatsApp",
+    "call": "Llamar",
+    "whereTitle": "Dónde estamos",
+    "directions": "Cómo llegar →",
+    "hoursTitle": "Horario"
+  },
+  "Footer": {
+    "tagline": "Tu carro, aunque no tengas SSN.",
+    "sub": "donde {voiceName} te consigue tu carro",
+    "nav": "Navegación",
+    "visit": "Visítanos",
+    "rights": "© {year} {name}. Todos los derechos reservados."
+  },
+  "Fab": {
+    "aria": "Escribime por WhatsApp",
+    "title": "WhatsApp Titanium"
+  },
+  "WhatsApp": {
+    "default": "Hola {name}, vi la web de {business} y quiero un carro.",
+    "vehicle": "Hola Sebastián, me interesa el {title} (Stock {stock}). ¿Me confirmás inicial y si está disponible?",
+    "faq": "Hola Sebastián, tengo una pregunta sobre un carro.",
+    "lead": "Hola Sebastián, acabo de dejar mis datos en la web."
+  }
+}

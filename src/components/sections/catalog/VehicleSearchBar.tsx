@@ -1,11 +1,12 @@
 "use client";
 
-import { useRouter } from "next/navigation";
+import { useTranslations } from "next-intl";
 import { useMemo, useState, type FormEvent } from "react";
 
 import { GlowButton } from "@/components/ui/GlowButton";
 import { SearchIcon } from "@/components/ui/icons";
 import { SlimSelectField } from "@/components/ui/SlimSelectField";
+import { useRouter } from "@/i18n/navigation";
 import { cn } from "@/lib/format";
 import type { BodyType, VehicleSearchEntry } from "@/lib/schemas/vehicle";
 import { BODY_LABEL, filterVehicles, type VehicleFilters } from "@/lib/vehicle-filters";
@@ -23,7 +24,21 @@ const cell = "rounded-xl bg-white px-4 py-2.5 lg:rounded-none lg:bg-transparent"
 const divider = "lg:border-l lg:border-navy-200/70";
 const label = "mb-0.5 block text-xs font-semibold text-navy-500";
 
+function catalogBodyLabel(type: BodyType, t: ReturnType<typeof useTranslations<"Catalog">>): string {
+  switch (type) {
+    case "van":
+      return t("minivan");
+    case "sedan":
+    case "suv":
+    case "pickup":
+      return t(type);
+    default:
+      return BODY_LABEL[type];
+  }
+}
+
 export function VehicleSearchBar({ index, initial = {}, className }: VehicleSearchBarProps) {
+  const t = useTranslations("Catalog");
   const router = useRouter();
   const [q, setQ] = useState(initial.q ?? "");
   const [bodyType, setBodyType] = useState<string>(initial.bodyType ?? "");
@@ -33,9 +48,9 @@ export function VehicleSearchBar({ index, initial = {}, className }: VehicleSear
     () =>
       uniqueSorted(
         index.map((v) => v.bodyType),
-        (a, b) => BODY_LABEL[a].localeCompare(BODY_LABEL[b]),
-      ).map((t) => ({ value: t, text: BODY_LABEL[t] })),
-    [index],
+        (a, b) => catalogBodyLabel(a, t).localeCompare(catalogBodyLabel(b, t)),
+      ).map((type) => ({ value: type, text: catalogBodyLabel(type, t) })),
+    [index, t],
   );
 
   const years = useMemo(() => {
@@ -69,29 +84,29 @@ export function VehicleSearchBar({ index, initial = {}, className }: VehicleSear
       className={cn("rounded-3xl bg-white p-4 shadow-card ring-1 ring-navy-100 sm:p-5", className)}
     >
       <div className="flex flex-wrap items-baseline gap-x-3 gap-y-1 px-1">
-        <h3 className="text-xl font-extrabold tracking-tight sm:text-2xl">¿Qué carro buscás?</h3>
-        <p className="text-sm text-navy-500">Buscá por marca o modelo, tipo o año.</p>
+        <h3 className="text-xl font-extrabold tracking-tight sm:text-2xl">{t("searchTitle")}</h3>
+        <p className="text-sm text-navy-500">{t("searchLead")}</p>
       </div>
 
       <div className="mt-4 grid gap-2 rounded-2xl bg-surface p-2 ring-1 ring-navy-100 sm:grid-cols-2 lg:grid-cols-[repeat(3,minmax(0,1fr))_auto] lg:items-center lg:gap-0">
         <div className={cn(cell, "sm:col-span-2 lg:col-span-1")}>
           <label htmlFor="search-q" className={label}>
-            Marca o modelo
+            {t("makeModel")}
           </label>
           <input
             id="search-q"
             type="search"
             value={q}
             onChange={(e) => setQ(e.target.value)}
-            placeholder="¿Qué tenés en mente?"
+            placeholder={t("placeholderQuery")}
             autoComplete="off"
             className="h-8 w-full bg-transparent text-[0.95rem] font-semibold text-navy-900 outline-none placeholder:font-medium placeholder:text-navy-400"
           />
         </div>
 
         <SlimSelectField
-          label="Tipo de carro"
-          placeholder="Todos los tipos"
+          label={t("bodyType")}
+          placeholder={t("allTypes")}
           options={bodyOptions}
           value={bodyType}
           onChange={onBodyType}
@@ -100,8 +115,8 @@ export function VehicleSearchBar({ index, initial = {}, className }: VehicleSear
         />
 
         <SlimSelectField
-          label="Año"
-          placeholder="Cualquier año"
+          label={t("year")}
+          placeholder={t("anyYear")}
           options={years.map((y) => ({ value: y, text: y }))}
           value={year}
           onChange={setYear}
@@ -111,7 +126,7 @@ export function VehicleSearchBar({ index, initial = {}, className }: VehicleSear
 
         <GlowButton type="submit" className="w-full sm:col-span-2 lg:col-span-1 lg:ml-2 lg:h-full lg:w-auto">
           <SearchIcon width={18} height={18} />
-          Buscar vehículos
+          {t("searchCta")}
         </GlowButton>
       </div>
     </form>
