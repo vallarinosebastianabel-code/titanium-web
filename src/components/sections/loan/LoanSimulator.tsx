@@ -117,9 +117,6 @@ function Calculator({ config, currency, whatsapp, vehicle }: LoanSimulatorProps 
 
   // Límites vigentes del slider de pago inicial (según un precio válido).
   const downBounds = downPaymentBounds(vehicle.price, config);
-  const downPercent = Number.isFinite(values.downPayment)
-    ? Math.round((values.downPayment / vehicle.price) * 100)
-    : null;
 
   const termIndex = Math.max(config.terms.indexOf(values.term), 0);
   const termProgress = (termIndex / (config.terms.length - 1)) * 100;
@@ -171,7 +168,6 @@ function Calculator({ config, currency, whatsapp, vehicle }: LoanSimulatorProps 
               max={downBounds.max}
               step={config.downPayment.step}
               formatBound={money}
-              hint={downPercent !== null ? `${downPercent}% del precio` : undefined}
               error={fieldErrors.downPayment}
               onBlur={field.onBlur}
               onChange={field.onChange}

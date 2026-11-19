@@ -46,19 +46,21 @@ export function calculateLoan({ price, downPayment, term, apr }: LoanInput): Loa
 const roundUpTo = (value: number, step: number) => Math.ceil(value / step) * step;
 const roundDownTo = (value: number, step: number) => Math.floor(value / step) * step;
 
-/** Límites permitidos del pago inicial para un precio dado. */
+/** Límites permitidos del pago inicial para un precio dado (mínimo fijo, máximo hasta casi el precio). */
 export function downPaymentBounds(price: number, config: LoanConfig) {
-  const { minPercent, maxPercent, step } = config.downPayment;
-  return {
-    min: roundUpTo((price * minPercent) / 100, step),
-    max: roundDownTo((price * maxPercent) / 100, step),
-  };
+  const { minAmount, step } = config.downPayment;
+  if (!Number.isFinite(price) || price <= 0) {
+    return { min: minAmount, max: minAmount };
+  }
+  const min = Math.min(roundUpTo(minAmount, step), roundDownTo(price, step));
+  const max = Math.max(min, roundDownTo(price, step));
+  return { min, max };
 }
 
 export function defaultDownPayment(price: number, config: LoanConfig) {
-  const { step, defaultPercent } = config.downPayment;
+  const { step, defaultAmount } = config.downPayment;
   const { min, max } = downPaymentBounds(price, config);
-  const target = roundUpTo((price * defaultPercent) / 100, step);
+  const target = roundUpTo(defaultAmount, step);
   return Math.min(Math.max(target, min), max);
 }
 

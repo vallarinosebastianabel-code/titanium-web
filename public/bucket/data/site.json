@@ -124,10 +124,9 @@
       "default": 25000
     },
     "downPayment": {
-      "minPercent": 35,
-      "maxPercent": 45,
+      "minAmount": 2000,
       "step": 100,
-      "defaultPercent": 40
+      "defaultAmount": 2000
     },
     "terms": [
       24,
@@ -161,6 +160,6 @@
       }
     ],
     "defaultCreditProfile": "good",
-    "disclaimer": "Prices shown reflect the amount to be financed after a 35%–45% down payment. Subject to approval. Not cash price.\nLos precios publicados son el monto a financiar después de una inicial del 35%–45%. Sujeto a aprobación. No es precio de contado."
+    "disclaimer": "Prices shown reflect the amount to be financed after the down payment. Subject to approval. Not cash price.\nLos precios publicados son el monto a financiar después de la inicial. Sujeto a aprobación. No es precio de contado."
   }
 }

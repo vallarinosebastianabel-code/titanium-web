@@ -16,7 +16,7 @@ export interface LoanFormValues {
  */
 export function createLoanFormSchema(config: LoanConfig, currency: CurrencyFormat) {
   const money = (n: number) => formatCurrency(n, currency);
-  const { price, downPayment, terms, creditProfiles } = config;
+  const { price, terms, creditProfiles } = config;
 
   return z
     .object({
@@ -44,13 +44,13 @@ export function createLoanFormSchema(config: LoanConfig, currency: CurrencyForma
         ctx.addIssue({
           code: "custom",
           path: ["downPayment"],
-          message: `Pago inicial mínimo: ${money(bounds.min)} (${downPayment.minPercent}%)`,
+          message: `Pago inicial mínimo: ${money(bounds.min)}`,
         });
       } else if (values.downPayment > bounds.max) {
         ctx.addIssue({
           code: "custom",
           path: ["downPayment"],
-          message: `Pago inicial máximo: ${money(bounds.max)} (${downPayment.maxPercent}%)`,
+          message: `Pago inicial máximo: ${money(bounds.max)}`,
         });
       }
     });

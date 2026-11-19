@@ -15,12 +15,11 @@ export const loanConfigSchema = z.object({
     default: z.number().positive(),
   }),
   downPayment: z.object({
-    /** % mínimo del precio exigido como pago inicial. */
-    minPercent: z.number().min(0).max(100),
-    /** % máximo permitido (evita préstamos de monto ~0). */
-    maxPercent: z.number().min(0).max(100),
+    /** Monto mínimo de inicial (USD). */
+    minAmount: z.number().nonnegative(),
     step: z.number().positive(),
-    defaultPercent: z.number().min(0).max(100),
+    /** Inicial por defecto al elegir un carro. */
+    defaultAmount: z.number().nonnegative(),
   }),
   /** Plazos disponibles, en meses. */
   terms: z.array(z.number().int().positive()).min(2),

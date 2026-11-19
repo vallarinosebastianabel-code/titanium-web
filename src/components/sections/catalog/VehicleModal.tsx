@@ -284,7 +284,7 @@ export function VehicleModal({ vehicle, currency, loan, whatsapp, onClose }: Veh
               </div>
               <div>
                 <dt className="text-navy-500">Rango de inicial</dt>
-                <dd className="text-lg font-extrabold text-navy-900">35%–45%</dd>
+                <dd className="text-lg font-extrabold text-navy-900">Desde $2,000*</dd>
               </div>
             </dl>
             <p className="mt-3 text-xs leading-relaxed text-navy-500">{DISCLAIMER_ES}</p>
