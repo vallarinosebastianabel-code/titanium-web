@@ -97,7 +97,7 @@
     "gallery": "Foto machin nan",
     "closeZoom": "Fèmen imaj agrandi",
     "seeDown": "Gade depo pou machin sa a",
-    "whatsapp": "Ekri Sebastián pou machin sa a"
+    "whatsapp": "Ekri m pou machin sa a"
   },
   "Financing": {
     "eyebrow": "Finansman",
@@ -117,14 +117,14 @@
     "estimateNote": "Estimasyon. Selon apwobasyon. Se pa pri kach.",
     "amountFinanced": "Montan pou finansman",
     "priceLabel": "Pri pou finansman",
-    "whatsappCta": "Ekri Sebastián sou WhatsApp",
+    "whatsappCta": "Ekri m sou WhatsApp",
     "leaveData": "Oswa kite enfòmasyon ou",
     "trust": "Finansman pwòp · Selon apwobasyon"
   },
   "Lead": {
     "successTitle": "Demann resevwa!",
     "successLead": "Sebastián ap ekri w pou konfime depo ak papye.",
-    "whatsappCta": "Ekri Sebastián sou WhatsApp",
+    "whatsappCta": "Ekri m sou WhatsApp",
     "lastStep": "Dènye etap",
     "formLead": "N ap kontakte w sou WhatsApp. Selon apwobasyon.",
     "name": "Non konplè",
@@ -154,7 +154,7 @@
     "requirements": "Kondisyon",
     "inventory": "Envantè",
     "more": "Ou pa jwenn repons ou?",
-    "whatsapp": "Ekri Sebastián sou WhatsApp",
+    "whatsapp": "Ekri m sou WhatsApp",
     "items": {
       "f01": {
         "q": "Èske m bezwen SSN (Social)?",

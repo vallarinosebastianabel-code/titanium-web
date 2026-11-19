@@ -131,7 +131,6 @@ export function VehicleModal({ vehicle, currency, loan, whatsapp, onClose }: Veh
   const interior = colorLabel(vehicle.interiorColor);
 
   const specs: Array<[string, string]> = [
-    [t("stock"), vehicle.stockNumber],
     [t("miles"), `${formatNumber(vehicle.mileage, currency.locale)} mi`],
     [t("year"), String(vehicle.year)],
     [t("type"), bodyTypeLabel(vehicle.bodyType, tCatalog)],

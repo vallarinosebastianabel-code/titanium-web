@@ -97,7 +97,7 @@
     "gallery": "Fotos do veículo",
     "closeZoom": "Fechar imagem ampliada",
     "seeDown": "Ver entrada deste carro",
-    "whatsapp": "Fale com Sebastián sobre este carro"
+    "whatsapp": "Fale sobre este carro"
   },
   "Financing": {
     "eyebrow": "Financiamento",
@@ -117,14 +117,14 @@
     "estimateNote": "Estimativa. Sujeito a aprovação. Não é preço à vista.",
     "amountFinanced": "Valor a financiar",
     "priceLabel": "Preço a financiar",
-    "whatsappCta": "Fale com Sebastián no WhatsApp",
+    "whatsappCta": "Fale no WhatsApp",
     "leaveData": "Ou deixe seus dados",
     "trust": "Financiamento próprio · Sujeito a aprovação"
   },
   "Lead": {
     "successTitle": "Pedido recebido!",
     "successLead": "Sebastián vai escrever para confirmar entrada e documentos.",
-    "whatsappCta": "Fale com Sebastián no WhatsApp",
+    "whatsappCta": "Fale no WhatsApp",
     "lastStep": "Último passo",
     "formLead": "Falamos no WhatsApp. Sujeito a aprovação.",
     "name": "Nome completo",
@@ -154,7 +154,7 @@
     "requirements": "Requisitos",
     "inventory": "Estoque",
     "more": "Não achou sua resposta?",
-    "whatsapp": "Fale com Sebastián no WhatsApp",
+    "whatsapp": "Fale no WhatsApp",
     "items": {
       "f01": {
         "q": "Preciso de SSN (Social Security)?",

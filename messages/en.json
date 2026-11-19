@@ -97,7 +97,7 @@
     "gallery": "Vehicle photos",
     "closeZoom": "Close enlarged image",
     "seeDown": "See down payment for this car",
-    "whatsapp": "Message Sebastián about this car"
+    "whatsapp": "Message me about this car"
   },
   "Financing": {
     "eyebrow": "Financing",
@@ -117,14 +117,14 @@
     "estimateNote": "Estimate. Subject to approval. Not cash price.",
     "amountFinanced": "Amount financed",
     "priceLabel": "Price to finance",
-    "whatsappCta": "Message Sebastián on WhatsApp",
+    "whatsappCta": "Message me on WhatsApp",
     "leaveData": "Or leave your info",
     "trust": "In-house financing · Subject to approval"
   },
   "Lead": {
     "successTitle": "Request received!",
     "successLead": "Sebastián will message you to confirm down payment and papers.",
-    "whatsappCta": "Message Sebastián on WhatsApp",
+    "whatsappCta": "Message me on WhatsApp",
     "lastStep": "Last step",
     "formLead": "We’ll reach you on WhatsApp. Subject to approval.",
     "name": "Full name",
@@ -154,7 +154,7 @@
     "requirements": "Requirements",
     "inventory": "Inventory",
     "more": "Don’t see your question?",
-    "whatsapp": "Message Sebastián on WhatsApp",
+    "whatsapp": "Message me on WhatsApp",
     "items": {
       "f01": {
         "q": "Do I need an SSN (Social Security)?",

@@ -97,7 +97,7 @@
     "gallery": "Fotos del vehículo",
     "closeZoom": "Cerrar imagen ampliada",
     "seeDown": "Ver inicial de este carro",
-    "whatsapp": "Escribime a Sebastián por este carro"
+    "whatsapp": "Escribime por este carro"
   },
   "Financing": {
     "eyebrow": "Financiamiento",
@@ -117,14 +117,14 @@
     "estimateNote": "Estimación. Sujeto a aprobación. No es precio de contado.",
     "amountFinanced": "Monto a financiar",
     "priceLabel": "Precio a financiar",
-    "whatsappCta": "Escribime a Sebastián por WhatsApp",
+    "whatsappCta": "Escribime por WhatsApp",
     "leaveData": "O dejá tus datos",
     "trust": "Financiamiento propio · Sujeto a aprobación"
   },
   "Lead": {
     "successTitle": "¡Solicitud recibida!",
     "successLead": "Sebastián te escribe para confirmar inicial y papeles.",
-    "whatsappCta": "Escribime a Sebastián por WhatsApp",
+    "whatsappCta": "Escribime por WhatsApp",
     "lastStep": "Último paso",
     "formLead": "Te escribimos por WhatsApp. Sujeto a aprobación.",
     "name": "Nombre completo",
@@ -154,7 +154,7 @@
     "requirements": "Requisitos",
     "inventory": "Inventario",
     "more": "¿No encontrás tu respuesta?",
-    "whatsapp": "Escribime a Sebastián por WhatsApp",
+    "whatsapp": "Escribime por WhatsApp",
     "items": {
       "f01": {
         "q": "¿Necesito SSN (Social)?",
